@@ -145,6 +145,38 @@
             left: 0;
         }
 
+        /* Language Toggle */
+        .language-toggle {
+            margin-left: 1rem;
+        }
+
+        .lang-btn {
+            background: linear-gradient(45deg, #3498db, #2980b9);
+            color: white;
+            border: none;
+            padding: 0.6rem 1.2rem;
+            border-radius: 20px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+            box-shadow: 0 3px 10px rgba(52, 152, 219, 0.3);
+        }
+
+        .lang-btn:hover,
+        .lang-btn:focus {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+            background: linear-gradient(45deg, #2980b9, #3498db);
+            outline: 2px solid transparent;
+        }
+
+        .lang-text {
+            display: inline-block;
+            min-width: 45px;
+            text-align: center;
+        }
+
         /* Mobile menu toggle */
         .mobile-menu-toggle {
             display: none;
@@ -605,6 +637,11 @@
             .nav-links li {
                 padding: 0.5rem 2rem;
             }
+            
+            .language-toggle {
+                margin-left: 0;
+                margin-top: 1rem;
+            }
 
             .hero h1 {
                 font-size: 2.5rem;
@@ -773,10 +810,15 @@
                 ☰
             </button>
             <ul class="nav-links" role="menubar">
-                <li role="none"><a href="#about" role="menuitem">About</a></li>
-                <li role="none"><a href="#services" role="menuitem">Services</a></li>
-                <li role="none"><a href="#conditions" role="menuitem">Conditions</a></li>
-                <li role="none"><a href="#contact" role="menuitem">Contact</a></li>
+                <li role="none"><a href="#about" role="menuitem" data-en="About" data-ta="பற்றி">About</a></li>
+                <li role="none"><a href="#services" role="menuitem" data-en="Services" data-ta="சேவைகள்">Services</a></li>
+                <li role="none"><a href="#conditions" role="menuitem" data-en="Conditions" data-ta="நிலைமைகள்">Conditions</a></li>
+                <li role="none"><a href="#contact" role="menuitem" data-en="Contact" data-ta="தொடர்பு">Contact</a></li>
+                <li role="none" class="language-toggle">
+                    <button id="languageToggle" aria-label="Switch language" class="lang-btn">
+                        <span class="lang-text">தமிழ்</span>
+                    </button>
+                </li>
             </ul>
         </nav>
     </header>
@@ -784,16 +826,16 @@
     <main id="main-content">
         <section class="hero" aria-labelledby="hero-heading">
             <div class="container hero-content">
-                <h1 id="hero-heading">Dr. Vignesh Subramani</h1>
-                <p class="subtitle">Consultant Nephrologist</p>
-                <p class="credentials">MBBS, MD General Medicine, DM Nephrology (PGIMER Chandigarh)</p>
+                <h1 id="hero-heading" data-en="Dr. Vignesh Subramani" data-ta="டாக்டர். விக்னேஷ் சுப்ரமணி">Dr. Vignesh Subramani</h1>
+                <p class="subtitle" data-en="Consultant Nephrologist" data-ta="ஆலோசனை சிறுநீரக மருத்துவர்">Consultant Nephrologist</p>
+                <p class="credentials" data-en="MBBS, MD General Medicine, DM Nephrology (PGIMER Chandigarh)" data-ta="எம்.பி.பி.எஸ், எம்.டி பொது மருத்துவம், டி.எம் சிறுநீரகவியல் (பி.ஜி.ஐ.எம்.இ.ஆர் சண்டீகர்)">MBBS, MD General Medicine, DM Nephrology (PGIMER Chandigarh)</p>
                 <div class="doctor-image">
                     <img src="images/doctor-image.png" alt="Dr. Vignesh Subramani - Expert Nephrologist specializing in kidney care" loading="lazy" />
                 </div>
-                <div class="motto">
+                <div class="motto" data-en="Your kidney health deserves more than just treatment – it deserves understanding, compassion, and time. I believe every patient has the right to know completely about their condition and deserves care that treats not just the disease, but the person as a whole." data-ta="உங்கள் சிறுநீரக ஆரோக்கியம் வெறும் சிகிச்சையை விட அதிகம் பெற வேண்டும் - அது புரிதல், இரக்கம் மற்றும் நேரம் பெற வேண்டும். ஒவ்வொரு நோயாளிக்கும் தங்கள் நிலையைப் பற்றி முழுமையாக அறியும் உரிமை உள்ளது என்றும், நோயை மட்டுமல்ல, ஒட்டுமொத்த நபரையும் கவனிக்கும் பராமரிப்பை பெற வேண்டும் என்றும் நான் நம்புகிறேன்.">
                     Your kidney health deserves more than just treatment – it deserves understanding, compassion, and time. I believe every patient has the right to know completely about their condition and deserves care that treats not just the disease, but the person as a whole.
                 </div>
-                <a href="#contact" class="cta-button">Schedule Consultation</a>
+                <a href="#contact" class="cta-button" data-en="Schedule Consultation" data-ta="ஆலோசனை பதிவு செய்யுங்கள்">Schedule Consultation</a>
             </div>
         </section>
 
@@ -801,14 +843,14 @@
             <div class="main-content">
                 <section class="hospital-info" aria-labelledby="hospital-heading">
                     <div class="hospital-card">
-                        <h3 id="hospital-heading">Currently serving at</h3>
+                        <h3 id="hospital-heading" data-en="Currently serving at" data-ta="தற்போது சேவை செய்யும் இடம்">Currently serving at</h3>
                         <p><a href="https://vijaysuperspecialityhospital.in" target="_blank" rel="noopener noreferrer"><strong>Vijay Superspeciality Hospital and Cancer Centre, Dharmapuri</strong></a></p>
                         <p><em>Providing comprehensive nephrology care with advanced medical facilities and dedicated patient support.</em></p>
                     </div>
                 </section>
 
                 <section id="about" class="section qualifications" aria-labelledby="qualifications-heading">
-                    <h2 id="qualifications-heading">Medical Qualifications</h2>
+                    <h2 id="qualifications-heading" data-en="Medical Qualifications" data-ta="மருத்துவ தகுதிகள்">Medical Qualifications</h2>
                     <div class="qual-grid">
                         <article class="qual-card">
                             <h3>Bachelor of Medicine & Surgery</h3>
@@ -829,7 +871,7 @@
                 </section>
 
                 <section id="services" class="section services" aria-labelledby="services-heading">
-                    <h2 id="services-heading">Specialized Medical Services</h2>
+                    <h2 id="services-heading" data-en="Specialized Medical Services" data-ta="சிறப்பு மருத்துவ சேவைகள்">Specialized Medical Services</h2>
                     <div class="services-grid">
                         <article class="service-card">
                             <h3>Comprehensive Kidney Care</h3>
@@ -859,7 +901,7 @@
                 </section>
 
                 <section id="conditions" class="section" aria-labelledby="conditions-heading">
-                    <h2 id="conditions-heading">Kidney Conditions & Expertise</h2>
+                    <h2 id="conditions-heading" data-en="Kidney Conditions & Expertise" data-ta="சிறுநீரக நிலைமைகள் மற்றும் நிபுணத்துவம்">Kidney Conditions & Expertise</h2>
                     <div class="conditions-grid" role="list">
                         <div class="condition-item" role="listitem">Chronic Kidney Disease</div>
                         <div class="condition-item" role="listitem">Acute Kidney Injury</div>
@@ -880,9 +922,9 @@
                 </section>
 
                 <section id="contact" class="section contact" aria-labelledby="contact-heading">
-                    <h2 id="contact-heading">Get in Touch</h2>
+                    <h2 id="contact-heading" data-en="Get in Touch" data-ta="தொடர்பில் இருங்கள்">Get in Touch</h2>
                     <div class="contact-card">
-                        <h3>📧 For Consultations & Inquiries</h3>
+                        <h3 data-en="📧 For Consultations & Inquiries" data-ta="📧 ஆலோசனைகள் மற்றும் விசாரணைகளுக்கு">📧 For Consultations & Inquiries</h3>
                         <a href="mailto:drvigneshsnephro@gmail.com" class="email-link" aria-label="Send email to Dr. Vignesh Subramani">drvigneshsnephro@gmail.com</a>
                         <div class="contact-note">
                             <p>I welcome patients from across the region and am committed to providing accessible, compassionate kidney care. Feel free to reach out with any questions about your kidney health or to schedule a consultation.</p>
@@ -984,6 +1026,46 @@
                 this.alt = 'Image not available';
                 this.style.display = 'none';
             });
+        });
+
+        // Language Toggle Functionality
+        let currentLanguage = localStorage.getItem('language') || 'en';
+        
+        function setLanguage(lang) {
+            currentLanguage = lang;
+            localStorage.setItem('language', lang);
+            
+            // Update all elements with translation data
+            document.querySelectorAll('[data-en][data-ta]').forEach(element => {
+                if (lang === 'ta') {
+                    element.textContent = element.getAttribute('data-ta');
+                } else {
+                    element.textContent = element.getAttribute('data-en');
+                }
+            });
+            
+            // Update language toggle button
+            const langBtn = document.querySelector('.lang-text');
+            if (langBtn) {
+                langBtn.textContent = lang === 'en' ? 'தமிழ்' : 'English';
+            }
+            
+            // Update document language attribute
+            document.documentElement.lang = lang === 'ta' ? 'ta' : 'en';
+        }
+        
+        // Initialize language on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            setLanguage(currentLanguage);
+            
+            // Add language toggle event listener
+            const languageToggle = document.getElementById('languageToggle');
+            if (languageToggle) {
+                languageToggle.addEventListener('click', () => {
+                    const newLang = currentLanguage === 'en' ? 'ta' : 'en';
+                    setLanguage(newLang);
+                });
+            }
         });
 
         // Keyboard navigation improvements
