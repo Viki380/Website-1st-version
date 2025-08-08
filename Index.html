@@ -183,7 +183,7 @@
             line-height: 1.6;
             animation: fadeInUp 1s ease 0.4s both;
             padding: 1.5rem;
-            border-left: 3px solid rgba(255, 255, 255, 0.5);
+            border-left: 0px solid rgba(255, 255, 255, 0.5);
             background: rgba(255, 255, 255, 0.05);
             border-radius: 0 10px 10px 0;
         }
@@ -216,6 +216,65 @@
             to {
                 opacity: 1;
                 transform: translateY(0);
+            }
+        }
+
+        /* CSS for Doctor Photo Section */
+        .doctor-photo-section {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .doctor-image {
+            display: inline-block;
+            position: relative;
+        }
+
+        .doctor-image img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 2;
+        }
+
+        .doctor-image::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            background: linear-gradient(45deg, #3498db, #2980b9);
+            border-radius: 50%;
+            z-index: 1;
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+
+        .doctor-image:hover::before {
+            opacity: 0.3;
+            transform: scale(1.1);
+        }
+
+        .doctor-image:hover img {
+            transform: scale(1.05);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+        }
+
+        /* Mobile responsive */
+        @media (max-width: 768px) {
+            .doctor-photo-section {
+                padding: 2rem 0;
+            }
+            
+            .doctor-image img {
+                width: 150px;
+                height: 150px;
             }
         }
 
@@ -628,6 +687,11 @@
             <h1>Dr. Vignesh Subramani</h1>
             <p class="subtitle">Consultant Nephrologist</p>
             <p class="credentials">MBBS, MD General Medicine, DM Nephrology (PGIMER Chandigarh)</p>
+                <div class="container">
+                    <div class="doctor-image">
+                        <img src="images/doctor-image.png" alt="Dr. Vignesh Subramani - Nephrologist" />
+                    </div>
+                </div>
             <div class="motto">
                 Your kidney health deserves more than just treatment – it deserves understanding, compassion, and time. I believe every patient has the right to know completely about their condition and deserves care that treats not just the disease, but the person as a whole.
             </div>
