@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,11 +17,15 @@
     <meta property="og:title" content="Dr. Vignesh Subramani - Expert Nephrologist Tamil Nadu | Kidney Specialist">
     <meta property="og:description" content="Expert nephrology care at Vijay Superspeciality Hospital. DM from PGIMER Chandigarh. Comprehensive kidney disease treatment with compassionate care.">
     <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nephrofoundation.com">
+    <meta property="og:image" content="https://nephrofoundation.com/images/doctor-image.png">
     <meta property="og:locale" content="en_IN">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Dr. Vignesh Subramani - Nephrologist Tamil Nadu">
     <meta name="twitter:description" content="Expert kidney specialist providing compassionate nephrology care with detailed patient education.">
+    <meta name="twitter:image" content="https://nephrofoundation.com/images/doctor-image.png">
     <link rel="canonical" href="https://nephrofoundation.com">
+    <link rel="preload" href="images/doctor-image.png" as="image">
 
     <style>
         * {
@@ -41,6 +46,23 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
+        }
+
+        /* Skip to content for accessibility */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 6px;
+            background: #2c5aa0;
+            color: white;
+            padding: 8px;
+            text-decoration: none;
+            border-radius: 4px;
+            z-index: 10000;
+        }
+
+        .skip-link:focus {
+            top: 6px;
         }
 
         /* Header */
@@ -100,8 +122,10 @@
             padding: 0.5rem 0;
         }
 
-        .nav-links a:hover {
+        .nav-links a:hover,
+        .nav-links a:focus {
             color: #2c5aa0;
+            outline: 2px solid transparent;
         }
 
         .nav-links a::after {
@@ -115,9 +139,20 @@
             transition: all 0.3s ease;
         }
 
-        .nav-links a:hover::after {
+        .nav-links a:hover::after,
+        .nav-links a:focus::after {
             width: 100%;
             left: 0;
+        }
+
+        /* Mobile menu toggle */
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: #2c3e50;
+            cursor: pointer;
         }
 
         /* Hero Section */
@@ -172,64 +207,10 @@
             animation: fadeInUp 1s ease 0.3s both;
         }
 
-        .motto {
-            font-size: 1.1rem;
-            font-style: italic;
-            margin-bottom: 2.5rem;
-            opacity: 0.95;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-            line-height: 1.6;
-            animation: fadeInUp 1s ease 0.4s both;
-            padding: 1.5rem;
-            border-left: 0px solid rgba(255, 255, 255, 0.5);
-            border-right: 0px solid rgba(255, 255, 255, 0.5);
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 0 10px 10px 0;
-        }
-
-        .cta-button {
-            display: inline-block;
-            background: linear-gradient(45deg, #3498db, #2980b9);
-            color: white;
-            padding: 15px 35px;
-            text-decoration: none;
-            border-radius: 30px;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            box-shadow: 0 6px 20px rgba(52, 152, 219, 0.3);
-            animation: fadeInUp 1s ease 0.5s both;
-            font-size: 1rem;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(52, 152, 219, 0.4);
-            background: linear-gradient(45deg, #2980b9, #3498db);
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* CSS for Doctor Photo Section */
-        .doctor-photo-section {
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            padding: 3rem 0;
-            text-align: center;
-        }
-
         .doctor-image {
             display: inline-block;
             position: relative;
+            margin: 2rem 0;
         }
 
         .doctor-image img {
@@ -267,15 +248,51 @@
             box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
         }
 
-        /* Mobile responsive */
-        @media (max-width: 768px) {
-            .doctor-photo-section {
-                padding: 2rem 0;
+        .motto {
+            font-size: 1.1rem;
+            font-style: italic;
+            margin-bottom: 2.5rem;
+            opacity: 0.95;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+            animation: fadeInUp 1s ease 0.4s both;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(45deg, #3498db, #2980b9);
+            color: white;
+            padding: 15px 35px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(52, 152, 219, 0.3);
+            animation: fadeInUp 1s ease 0.5s both;
+            font-size: 1rem;
+        }
+
+        .cta-button:hover,
+        .cta-button:focus {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(52, 152, 219, 0.4);
+            background: linear-gradient(45deg, #2980b9, #3498db);
+            outline: 2px solid transparent;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
             }
-            
-            .doctor-image img {
-                width: 150px;
-                height: 150px;
+            to {
+                opacity: 1;
+                transform: translateY(0);
             }
         }
 
@@ -342,6 +359,18 @@
             color: #5d6d7e;
             font-size: 1.1rem;
             line-height: 1.6;
+        }
+
+        .hospital-card a {
+            color: #2c5aa0;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .hospital-card a:hover,
+        .hospital-card a:focus {
+            color: #1e3d72;
+            text-decoration: underline;
         }
 
         /* Qualifications */
@@ -524,9 +553,11 @@
             margin: 1rem 0;
         }
 
-        .email-link:hover {
+        .email-link:hover,
+        .email-link:focus {
             transform: translateY(-3px);
             box-shadow: 0 10px 30px rgba(52, 152, 219, 0.4);
+            outline: 2px solid transparent;
         }
 
         .contact-note {
@@ -550,8 +581,29 @@
 
         /* Mobile Responsive */
         @media (max-width: 768px) {
+            .mobile-menu-toggle {
+                display: block;
+            }
+
             .nav-links {
                 display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: rgba(255, 255, 255, 0.98);
+                flex-direction: column;
+                gap: 0;
+                padding: 1rem 0;
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links li {
+                padding: 0.5rem 2rem;
             }
 
             .hero h1 {
@@ -560,6 +612,11 @@
 
             .hero .subtitle {
                 font-size: 1.2rem;
+            }
+
+            .doctor-image img {
+                width: 150px;
+                height: 150px;
             }
 
             .section {
@@ -574,6 +631,41 @@
                 font-size: 1rem;
                 padding: 1rem;
             }
+
+            .qual-grid,
+            .services-grid,
+            .conditions-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Loading animation */
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.5;
+            }
+        }
+
+        .loading {
+            animation: pulse 2s infinite;
+        }
+
+        /* Focus indicators for accessibility */
+        *:focus {
+            outline: 2px solid #3498db;
+            outline-offset: 2px;
+        }
+
+        /* Reduce motion for users who prefer it */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
         }
     </style>
 
@@ -586,20 +678,22 @@
       "alternateName": "Vignesh Subramani Nephrologist",
       "jobTitle": "Consultant Nephrologist",
       "specialty": "Nephrology",
-      "website":"Nephrofoundation",
+      "website": "https://nephrofoundation.com",
       "medicalSpecialty": [
         "Nephrology",
         "Kidney Transplantation", 
         "Dialysis",
         "Chronic Kidney Disease",
         "Acute Kidney Injury"
+      ],
       "worksFor": {
         "@type": "Hospital",
-        "name": "Vijay Superspeciality Hospital"
+        "name": "Vijay Superspeciality Hospital",
+        "url": "https://vijaysuperspecialityhospital.in"
       },
       "address": {
         "@type": "PostalAddress",
-        "addressRegion":"Dharmapuri",
+        "addressLocality": "Dharmapuri",
         "addressRegion": "Tamil Nadu",
         "addressCountry": "India"
       },
@@ -608,7 +702,6 @@
         "South India"
       ],
       "description": "Experienced Nephrologist providing compassionate kidney care with detailed explanations and personalized treatment",
-      "medicalSpecialty": ["Nephrology", "Kidney Transplant", "Dialysis"],
       "alumniOf": [
         {
           "@type": "CollegeOrUniversity",
@@ -621,9 +714,8 @@
           "sameAs": "https://en.wikipedia.org/wiki/Postgraduate_Institute_of_Medical_Education_and_Research"
         }
       ],
-      "email": "drvigneshsnephro@gmail.com"
-       "description": "Expert nephrologist in Tamil Nadu specializing in comprehensive kidney care, including management of chronic kidney diseases, dialysis procedures, and transplant patient care under Nephro Foundation.",
-         "knowsAbout": [
+      "email": "drvigneshsnephro@gmail.com",
+      "knowsAbout": [
         "Chronic Kidney Disease",
         "Acute Kidney Injury", 
         "Diabetic Nephropathy",
@@ -646,10 +738,10 @@
       ],
       "priceRange": "Consultation fees vary",
       "availableLanguage": ["English", "Tamil"],
-       "url": "https://www.nephrofoundation.com"
+      "url": "https://nephrofoundation.com"
     }
     </script>
-     <script type="application/ld+json">
+    <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "MedicalBusiness",
@@ -672,136 +764,141 @@
     </script>
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
     <header>
-        <nav class="container">
+        <nav class="container" role="navigation" aria-label="Main navigation">
             <div class="logo">Nephrofoundation</div>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#conditions">Conditions</a></li>
-                <li><a href="#contact">Contact</a></li>
+            <button class="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
+                ☰
+            </button>
+            <ul class="nav-links" role="menubar">
+                <li role="none"><a href="#about" role="menuitem">About</a></li>
+                <li role="none"><a href="#services" role="menuitem">Services</a></li>
+                <li role="none"><a href="#conditions" role="menuitem">Conditions</a></li>
+                <li role="none"><a href="#contact" role="menuitem">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="hero">
-        <div class="container hero-content">
-            <h1>Dr. Vignesh Subramani</h1>
-            <p class="subtitle">Consultant Nephrologist</p>
-            <p class="credentials">MBBS, MD General Medicine, DM Nephrology (PGIMER Chandigarh)</p>
-                <div class="container">
-                    <div class="doctor-image">
-                        <img src="images/doctor-image.png" alt="Dr. Vignesh Subramani - Nephrologist" />
-                    </div>
+    <main id="main-content">
+        <section class="hero" aria-labelledby="hero-heading">
+            <div class="container hero-content">
+                <h1 id="hero-heading">Dr. Vignesh Subramani</h1>
+                <p class="subtitle">Consultant Nephrologist</p>
+                <p class="credentials">MBBS, MD General Medicine, DM Nephrology (PGIMER Chandigarh)</p>
+                <div class="doctor-image">
+                    <img src="images/doctor-image.png" alt="Dr. Vignesh Subramani - Expert Nephrologist specializing in kidney care" loading="lazy" />
                 </div>
-            <div class="motto">
-                Your kidney health deserves more than just treatment – it deserves understanding, compassion, and time. I believe every patient has the right to know completely about their condition and deserves care that treats not just the disease, but the person as a whole.
+                <div class="motto">
+                    Your kidney health deserves more than just treatment – it deserves understanding, compassion, and time. I believe every patient has the right to know completely about their condition and deserves care that treats not just the disease, but the person as a whole.
+                </div>
+                <a href="#contact" class="cta-button">Schedule Consultation</a>
             </div>
-            <a href="#contact" class="cta-button">Schedule Consultation</a>
+        </section>
+
+        <div class="container">
+            <div class="main-content">
+                <section class="hospital-info" aria-labelledby="hospital-heading">
+                    <div class="hospital-card">
+                        <h3 id="hospital-heading">Currently serving at</h3>
+                        <p><a href="https://vijaysuperspecialityhospital.in" target="_blank" rel="noopener noreferrer"><strong>Vijay Superspeciality Hospital and Cancer Centre, Dharmapuri</strong></a></p>
+                        <p><em>Providing comprehensive nephrology care with advanced medical facilities and dedicated patient support.</em></p>
+                    </div>
+                </section>
+
+                <section id="about" class="section qualifications" aria-labelledby="qualifications-heading">
+                    <h2 id="qualifications-heading">Medical Qualifications</h2>
+                    <div class="qual-grid">
+                        <article class="qual-card">
+                            <h3>Bachelor of Medicine & Surgery</h3>
+                            <p>MBBS from Madras Medical College, Chennai<br>
+                            Foundation in comprehensive medical care</p>
+                        </article>
+                        <article class="qual-card">
+                            <h3>Master of Medicine</h3>
+                            <p>MD in General Medicine from Madras Medical College<br>
+                            Specialization in internal medicine</p>
+                        </article>
+                        <article class="qual-card">
+                            <h3>Doctorate in Nephrology</h3>
+                            <p>DM in Nephrology from PGIMER Chandigarh<br>
+                            Advanced training in kidney diseases and transplantation</p>
+                        </article>
+                    </div>
+                </section>
+
+                <section id="services" class="section services" aria-labelledby="services-heading">
+                    <h2 id="services-heading">Specialized Medical Services</h2>
+                    <div class="services-grid">
+                        <article class="service-card">
+                            <h3>Comprehensive Kidney Care</h3>
+                            <p>Complete evaluation and management of all kidney-related conditions with personalized treatment plans tailored to each patient's unique needs.</p>
+                        </article>
+                        <article class="service-card">
+                            <h3>Renal Biopsy</h3>
+                            <p>Precision kidney biopsy procedures using advanced techniques for accurate diagnosis of complex renal conditions.</p>
+                        </article>
+                        <article class="service-card">
+                            <h3>Dialysis Access Procedures</h3>
+                            <p>Expert placement of permanent catheters and creation of arteriovenous fistulas for optimal dialysis access and patient comfort.</p>
+                        </article>
+                        <article class="service-card">
+                            <h3>Transplant Management</h3>
+                            <p>Comprehensive pre-transplant evaluation and post-transplant care ensuring the best possible outcomes for kidney transplant patients.</p>
+                        </article>
+                        <article class="service-card">
+                            <h3>Chronic Disease Management</h3>
+                            <p>Long-term care strategies for chronic kidney conditions, focusing on slowing progression and improving quality of life.</p>
+                        </article>
+                        <article class="service-card">
+                            <h3>Patient Education & Counseling</h3>
+                            <p>Detailed explanations of kidney conditions, treatment options, and lifestyle modifications to empower informed healthcare decisions.</p>
+                        </article>
+                    </div>
+                </section>
+
+                <section id="conditions" class="section" aria-labelledby="conditions-heading">
+                    <h2 id="conditions-heading">Kidney Conditions & Expertise</h2>
+                    <div class="conditions-grid" role="list">
+                        <div class="condition-item" role="listitem">Chronic Kidney Disease</div>
+                        <div class="condition-item" role="listitem">Acute Kidney Injury</div>
+                        <div class="condition-item" role="listitem">Diabetic Nephropathy</div>
+                        <div class="condition-item" role="listitem">Hypertensive Kidney Disease</div>
+                        <div class="condition-item" role="listitem">Glomerulonephritis</div>
+                        <div class="condition-item" role="listitem">Polycystic Kidney Disease</div>
+                        <div class="condition-item" role="listitem">Nephrotic Syndrome</div>
+                        <div class="condition-item" role="listitem">Nephritic Syndrome</div>
+                        <div class="condition-item" role="listitem">Kidney Stone Disease</div>
+                        <div class="condition-item" role="listitem">Dialysis Care</div>
+                        <div class="condition-item" role="listitem">Transplant Care</div>
+                        <div class="condition-item" role="listitem">Electrolyte Disorders</div>
+                        <div class="condition-item" role="listitem">Proteinuria & Hematuria</div>
+                        <div class="condition-item" role="listitem">Urinary Tract Infections</div>
+                        <div class="condition-item" role="listitem">Acid-Base Disorders</div>
+                    </div>
+                </section>
+
+                <section id="contact" class="section contact" aria-labelledby="contact-heading">
+                    <h2 id="contact-heading">Get in Touch</h2>
+                    <div class="contact-card">
+                        <h3>📧 For Consultations & Inquiries</h3>
+                        <a href="mailto:drvigneshsnephro@gmail.com" class="email-link" aria-label="Send email to Dr. Vignesh Subramani">drvigneshsnephro@gmail.com</a>
+                        <div class="contact-note">
+                            <p>I welcome patients from across the region and am committed to providing accessible, compassionate kidney care. Feel free to reach out with any questions about your kidney health or to schedule a consultation.</p>
+                            <p>Every inquiry receives personal attention, and I ensure that all patients receive thorough explanations about their condition and treatment options.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
         </div>
-    </section>
+    </main>
 
-    <div class="container">
-        <div class="main-content">
-            <section class="hospital-info">
-                <div class="hospital-card">
-                    <h3>Currently serving at</h3>
-                    <p><a href="https://vijaysuperspecialityhospital.in" style="text-decoration: none;"><strong>Vijay Superspeciality Hospital and cancer centre, Dharmapuri</strong></a></p>
-                    <p><i>Providing comprehensive nephrology care with advanced medical facilities and dedicated patient support.</i></p>
-                </div>
-            </section>
-
-            <section id="about" class="section qualifications">
-                <h2>Medical Qualifications</h2>
-                <div class="qual-grid">
-                    <div class="qual-card">
-                        <h3>Bachelor of Medicine & Surgery</h3>
-                        <p>MBBS from Madras Medical College, Chennai<br>
-                        Foundation in comprehensive medical care</p>
-                    </div>
-                    <div class="qual-card">
-                        <h3>Master of Medicine</h3>
-                        <p>MD in General Medicine from Madras Medical College<br>
-                        Specialization in internal medicine</p>
-                    </div>
-                    <div class="qual-card">
-                        <h3>Doctorate in Nephrology</h3>
-                        <p>DM in Nephrology from PGIMER Chandigarh<br>
-                        Advanced training in kidney diseases and transplantation</p>
-                    </div>
-                </div>
-            </section>
-
-            <section id="services" class="section services">
-                <h2>Specialized Medical Services</h2>
-                <div class="services-grid">
-                    <div class="service-card">
-                        <h3>Comprehensive Kidney Care</h3>
-                        <p>Complete evaluation and management of all kidney-related conditions with personalized treatment plans tailored to each patient's unique needs.</p>
-                    </div>
-                    <div class="service-card">
-                        <h3>Renal Biopsy</h3>
-                        <p>Precision kidney biopsy procedures using advanced techniques for accurate diagnosis of complex renal conditions.</p>
-                    </div>
-                    <div class="service-card">
-                        <h3>Dialysis Access Procedures</h3>
-                        <p>Expert placement of permanent catheters and creation of arteriovenous fistulas for optimal dialysis access and patient comfort.</p>
-                    </div>
-                    <div class="service-card">
-                        <h3>Transplant Management</h3>
-                        <p>Comprehensive pre-transplant evaluation and post-transplant care ensuring the best possible outcomes for kidney transplant patients.</p>
-                    </div>
-                    <div class="service-card">
-                        <h3>Chronic Disease Management</h3>
-                        <p>Long-term care strategies for chronic kidney conditions, focusing on slowing progression and improving quality of life.</p>
-                    </div>
-                    <div class="service-card">
-                        <h3>Patient Education & Counseling</h3>
-                        <p>Detailed explanations of kidney conditions, treatment options, and lifestyle modifications to empower informed healthcare decisions.</p>
-                    </div>
-                </div>
-            </section>
-
-            <section id="conditions" class="section">
-                <h2>Kidney Conditions & Expertise</h2>
-                <div class="conditions-grid">
-                    <div class="condition-item">Chronic Kidney Disease</div>
-                    <div class="condition-item">Acute Kidney Injury</div>
-                    <div class="condition-item">Diabetic Nephropathy</div>
-                    <div class="condition-item">Hypertensive Kidney Disease</div>
-                    <div class="condition-item">Glomerulonephritis</div>
-                    <div class="condition-item">Polycystic Kidney Disease</div>
-                    <div class="condition-item">Nephrotic Syndrome</div>
-                    <div class="condition-item">Nephritic Syndrome</div>
-                    <div class="condition-item">Kidney Stone Disease</div>
-                    <div class="condition-item">Dialysis care</div>
-                    <div class="condition-item">Transplant Care</div>
-                    <div class="condition-item">Electrolyte Disorders</div>
-                    <div class="condition-item">Proteinuria & Hematuria</div>
-                    <div class="condition-item">Urinary tract infections</div>
-                    <div class="condition-item">Acid-Base Disorders</div>
-                </div>
-            </section>
-
-            <section id="contact" class="section contact">
-                <h2>Get in Touch</h2>
-                <div class="contact-card">
-                    <h3>📧 For Consultations & Inquiries</h3>
-                    <a href="mailto:drvigneshsnephro@gmail.com" class="email-link">Dr. Vignesh Subramani</a>
-                    <div class="contact-note">
-                        <p>I welcome patients from across the region and am committed to providing accessible, compassionate kidney care. Feel free to reach out with any questions about your kidney health or to schedule a consultation.</p>
-                        <p>Every inquiry receives personal attention, and I ensure that all patients receive thorough explanations about their condition and treatment options.</p>
-                    </div>
-                </div>
-            </section>
-        </div>
-    </div>
-
-    <footer>
+    <footer role="contentinfo">
         <div class="container">
             <p>&copy; 2025 Nephrofoundation. All Rights Reserved</p>
             <p>Compassionate Kidney Care | Comprehensive Patient Education | Advanced Nephrology Services</p>
-            <p> Website designed to serve patients across Tamil Nadu and beyond.</p>
+            <p>Website designed to serve patients across Tamil Nadu and beyond.</p>
         </div>
     </footer>
 
@@ -817,6 +914,24 @@
                         block: 'start'
                     });
                 }
+            });
+        });
+
+        // Mobile menu toggle
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileMenuToggle.addEventListener('click', function() {
+            const isOpen = navLinks.classList.contains('active');
+            navLinks.classList.toggle('active');
+            this.setAttribute('aria-expanded', !isOpen);
+        });
+
+        // Close mobile menu when clicking on a link
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                mobileMenuToggle.setAttribute('aria-expanded', 'false');
             });
         });
 
@@ -862,22 +977,23 @@
                 observer.observe(card);
             });
         });
-        
-        // Mobile menu toggle
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
 
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
+        // Error handling for images
+        document.querySelectorAll('img').forEach(img => {
+            img.addEventListener('error', function() {
+                this.alt = 'Image not available';
+                this.style.display = 'none';
+            });
         });
 
-        // Close mobile menu when a link is clicked
-        const mobileMenuLinks = mobileMenu.getElementsByTagName('a');
-        for (let link of mobileMenuLinks) {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
-        }
+        // Keyboard navigation improvements
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+                mobileMenuToggle.setAttribute('aria-expanded', 'false');
+                mobileMenuToggle.focus();
+            }
+        });
     </script>
 </body>
 </html>

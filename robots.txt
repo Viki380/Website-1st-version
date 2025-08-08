@@ -1,2 +1,26 @@
+
 User-agent: *
-Disallow: /sitemap.xml
+Allow: /
+
+# Sitemap location
+Sitemap: https://nephrofoundation.com/sitemap.xml
+
+# Crawl delay for respectful crawling
+Crawl-delay: 1
+
+# Allow all search engines to access main content
+Allow: /images/
+Allow: /*.css
+Allow: /*.js
+
+# Block any potential admin or private areas (if added in future)
+Disallow: /admin/
+Disallow: /private/
+Disallow: *.pdf$
+
+# Medical website specific directives
+# Allow crawling of medical content for better patient discovery
+Allow: /services/
+Allow: /conditions/
+Allow: /about/
+Allow: /contact/
