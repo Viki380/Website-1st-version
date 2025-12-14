@@ -58,6 +58,18 @@
 
         /* Hero */
         .hero{background:linear-gradient(135deg,#2c3e50 0%,#34495e 100%);color:#fff;padding:4.5rem 0;text-align:center;position:relative;overflow:hidden}
+        .hero::before{
+            content:"";
+            position:absolute;
+            inset:-40%;
+            background:
+              radial-gradient(circle at 20% 20%, rgba(52,152,219,0.35) 0%, rgba(52,152,219,0) 55%),
+              radial-gradient(circle at 80% 25%, rgba(41,128,185,0.35) 0%, rgba(41,128,185,0) 60%),
+              radial-gradient(circle at 55% 85%, rgba(255,255,255,0.10) 0%, rgba(255,255,255,0) 58%);
+            filter: blur(10px);
+            transform: translateZ(0);
+            opacity:0.9;
+        }
         .hero-content{max-width:840px;margin:0 auto;position:relative;z-index:2}
         .hero h1{font-size:2.9rem;font-weight:300;margin-bottom:0.6rem}
         .subtitle{font-size:1.25rem;margin-bottom:0.6rem;opacity:0.95}
@@ -68,8 +80,15 @@
         .doctor-image:hover img{transform:scale(1.03)}
 
         .motto{max-width:640px;margin:1rem auto 1.6rem;padding:1.25rem;background:rgba(255,255,255,0.06);border-radius:12px;font-style:italic}
-        .cta-button{display:inline-block;background:linear-gradient(45deg,var(--accent1),var(--accent2));color:#fff;padding:12px 30px;border-radius:28px;text-decoration:none;font-weight:500;box-shadow:0 6px 20px rgba(52,152,219,0.28)}
-        .cta-button:focus,.cta-button:hover{transform:translateY(-3px)}
+        .cta-row{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:0.5rem}
+        .cta-button,.secondary-button{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:46px}
+        .cta-button{background:linear-gradient(45deg,var(--accent1),var(--accent2));color:#fff;padding:12px 22px;border-radius:28px;text-decoration:none;font-weight:600;box-shadow:0 6px 20px rgba(52,152,219,0.28)}
+        .secondary-button{background:rgba(255,255,255,0.12);color:#fff;padding:12px 18px;border-radius:28px;text-decoration:none;font-weight:600;border:1px solid rgba(255,255,255,0.22)}
+        .cta-button:focus,.cta-button:hover,.secondary-button:focus,.secondary-button:hover{transform:translateY(-3px)}
+
+        .chip-row{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:1rem auto 0;max-width:860px}
+        .chip{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;background:rgba(255,255,255,0.10);border:1px solid rgba(255,255,255,0.18);font-size:0.92rem;opacity:0.98}
+        .chip svg{width:16px;height:16px;flex:0 0 16px}
 
         .main-content{background:var(--content-bg);margin:2.5rem 0;border-radius:20px;box-shadow:0 10px 40px rgba(0,0,0,0.08);overflow:hidden}
         .section{padding:3.2rem}
@@ -85,9 +104,38 @@
 
         .condition-item{background:linear-gradient(135deg,var(--accent1),var(--accent2));color:#fff;padding:1.25rem;border-radius:10px;text-align:center}
 
+        /* Highlights / process */
+        .highlights{background:linear-gradient(135deg,#ffffff 0%,#f6f9ff 100%)}
+        .highlight-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.2rem;margin-top:1.6rem}
+        .highlight-card{background:#fff;border:1px solid #eef2f6;border-radius:14px;padding:1.25rem;box-shadow:0 10px 24px rgba(0,0,0,0.05)}
+        .highlight-title{display:flex;align-items:center;gap:10px;margin:0 0 0.4rem}
+        .highlight-title svg{width:20px;height:20px;flex:0 0 20px}
+        .highlight-card p{margin:0;color:var(--muted)}
+        .process{margin-top:2rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem}
+        .step{border-radius:14px;padding:1.25rem;background:linear-gradient(135deg,#ecf4ff 0%,#ffffff 55%);border:1px solid #e7eef8}
+        .step strong{display:block;margin-bottom:0.3rem}
+
+        /* FAQ */
+        .faq{background:linear-gradient(135deg,#f7fbff 0%,#ffffff 100%)}
+        details{background:#fff;border:1px solid #e9eef5;border-radius:12px;padding:14px 16px;box-shadow:0 10px 24px rgba(0,0,0,0.04)}
+        details + details{margin-top:12px}
+        summary{cursor:pointer;font-weight:700;color:#233244;list-style:none}
+        summary::-webkit-details-marker{display:none}
+        summary:after{content:"+";float:right;font-weight:800;color:var(--primary)}
+        details[open] summary:after{content:"–"}
+        details p{margin:0.8rem 0 0;color:var(--muted)}
+
         .contact{background:linear-gradient(135deg,#2c3e50 0%,#34495e 100%);color:#fff;text-align:center}
         .contact-card{background:rgba(255,255,255,0.04);padding:2rem;border-radius:16px;max-width:720px;margin:1rem auto}
         .email-link{display:inline-block;background:linear-gradient(45deg,var(--accent1),var(--accent2));color:#fff;padding:12px 22px;border-radius:28px;text-decoration:none;font-weight:500}
+        .contact-actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:0.8rem 0 0.4rem}
+        .contact-actions a,.contact-actions button{border-radius:999px;padding:10px 14px;border:1px solid rgba(255,255,255,0.20);background:rgba(255,255,255,0.10);color:#fff;font-weight:700;cursor:pointer;min-height:44px}
+        .contact-actions a:hover,.contact-actions button:hover{transform:translateY(-2px)}
+        .contact-actions .email-link{background:linear-gradient(45deg,var(--accent1),var(--accent2));border-color:transparent}
+
+        /* Toast */
+        .toast{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);background:rgba(22,32,40,0.92);color:#fff;padding:10px 14px;border-radius:12px;box-shadow:0 16px 35px rgba(0,0,0,0.28);opacity:0;pointer-events:none;transition:opacity .25s ease, transform .25s ease;z-index:99999}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(-6px)}
 
         footer{background:#162028;color:#bfc8cc;text-align:center;padding:2rem 0}
 
@@ -111,6 +159,7 @@
             .doctor-image img{width:150px;height:150px}
             .section{padding:2rem}
             .contact-form{grid-template-columns:1fr}
+            .cta-row{gap:10px}
             .floating-cta{right:12px;bottom:12px;padding:10px 12px}
         }
 
@@ -163,6 +212,16 @@
           "@type": "Question",
           "name": "How can I schedule a consultation?",
           "acceptedAnswer": {"@type":"Answer","text":"Use the contact form on the site or email drvigneshsnephro@gmail.com. For urgent matters contact the hospital directly."}
+        },
+        {
+          "@type": "Question",
+          "name": "What should I bring to my first visit?",
+          "acceptedAnswer": {"@type":"Answer","text":"Bring your current medications list, recent lab reports, imaging results if any, and any previous discharge summaries or dialysis records. If you have diabetes or high blood pressure, bring your recent readings."}
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer kidney health education?",
+          "acceptedAnswer": {"@type":"Answer","text":"Yes. The site includes a public education section focused on prevention, early detection, and understanding kidney health."}
         }
       ]
     }
@@ -180,6 +239,8 @@
                 <li role="none"><a href="#about" role="menuitem">About</a></li>
                 <li role="none"><a href="#services" role="menuitem">Services</a></li>
                 <li role="none"><a href="#conditions" role="menuitem">Conditions</a></li>
+                <li role="none"><a href="#education" role="menuitem">Education</a></li>
+                <li role="none"><a href="#faq" role="menuitem">FAQ</a></li>
                 <li role="none"><a href="#contact" role="menuitem">Contact</a></li>
             </ul>
         </nav>
@@ -203,7 +264,26 @@
                     Your kidney health deserves more than just treatment – Because every kidney deserves expert care, and every patient deserves to be heard.
                 </div>
 
-                <a href="#contact" class="cta-button">Schedule Consultation</a>
+                <div class="cta-row" role="group" aria-label="Primary actions">
+                    <a href="#contact" class="cta-button">Schedule Consultation</a>
+                    <a href="#services" class="secondary-button">Explore Services</a>
+                    <a href="#education" class="secondary-button">Watch Awareness Talk</a>
+                </div>
+
+                <div class="chip-row" aria-label="Care approach highlights">
+                    <span class="chip">
+                        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        Clear explanations
+                    </span>
+                    <span class="chip">
+                        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s-7-4.4-7-11a4 4 0 0 1 7-2 4 4 0 0 1 7 2c0 6.6-7 11-7 11Z" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        Compassionate care
+                    </span>
+                    <span class="chip">
+                        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12h6l2-4 2 8 2-4h4" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        Evidence-based plans
+                    </span>
+                </div>
             </div>
         </section>
         
@@ -214,6 +294,52 @@
                         <h3 id="hospital-heading">Currently serving at</h3>
                         <p><a href="https://vijaysuperspecialityhospital.in" target="_blank" rel="noopener noreferrer"><strong>Vijay Superspeciality Hospital and Cancer Centre, Dharmapuri</strong></a></p>
                         <p><em>Providing comprehensive nephrology care with advanced medical facilities and dedicated patient support.</em></p>
+                    </div>
+                </section>
+
+                <section class="section highlights" aria-labelledby="highlights-heading">
+                    <h2 id="highlights-heading">A Patient‑First Approach</h2>
+                    <p style="text-align:center;max-width:860px;margin:0 auto;color:var(--muted)">
+                        The focus is on careful evaluation, clear communication, and long‑term kidney health—so patients feel informed and supported at every step.
+                    </p>
+
+                    <div class="highlight-grid" role="list" aria-label="Key highlights">
+                        <article class="highlight-card" role="listitem">
+                            <h3 class="highlight-title">
+                                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 19V5a2 2 0 0 1 2-2h9l5 5v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z" stroke="#2c5aa0" stroke-width="1.7"/><path d="M9 13h6M9 17h6M9 9h3" stroke="#2c5aa0" stroke-width="1.7" stroke-linecap="round"/></svg>
+                                Personalized plans
+                            </h3>
+                            <p>Recommendations are aligned to medical history, labs, and lifestyle—without unnecessary complexity.</p>
+                        </article>
+                        <article class="highlight-card" role="listitem">
+                            <h3 class="highlight-title">
+                                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2v6" stroke="#2c5aa0" stroke-width="1.7" stroke-linecap="round"/><path d="M12 16v6" stroke="#2c5aa0" stroke-width="1.7" stroke-linecap="round"/><path d="M4 12h6" stroke="#2c5aa0" stroke-width="1.7" stroke-linecap="round"/><path d="M14 12h6" stroke="#2c5aa0" stroke-width="1.7" stroke-linecap="round"/><path d="M7.5 7.5l3 3" stroke="#2c5aa0" stroke-width="1.7" stroke-linecap="round"/><path d="M13.5 13.5l3 3" stroke="#2c5aa0" stroke-width="1.7" stroke-linecap="round"/><path d="M16.5 7.5l-3 3" stroke="#2c5aa0" stroke-width="1.7" stroke-linecap="round"/><path d="M10.5 13.5l-3 3" stroke="#2c5aa0" stroke-width="1.7" stroke-linecap="round"/></svg>
+                                Clear next steps
+                            </h3>
+                            <p>Each visit aims to leave patients with a simple plan: what to do now, what to monitor, and when to follow up.</p>
+                        </article>
+                        <article class="highlight-card" role="listitem">
+                            <h3 class="highlight-title">
+                                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s-7-4.4-7-11a4 4 0 0 1 7-2 4 4 0 0 1 7 2c0 6.6-7 11-7 11Z" stroke="#2c5aa0" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                Supportive counseling
+                            </h3>
+                            <p>Time is spent on education—helping families understand kidney health and treatment choices.</p>
+                        </article>
+                    </div>
+
+                    <div class="process" aria-label="What to expect">
+                        <div class="step">
+                            <strong>1) Listen & Review</strong>
+                            Past records, symptoms, medications, and risk factors are reviewed carefully.
+                        </div>
+                        <div class="step">
+                            <strong>2) Explain & Decide</strong>
+                            Options are discussed in plain language, including benefits, risks, and practical steps.
+                        </div>
+                        <div class="step">
+                            <strong>3) Follow‑up Plan</strong>
+                            A clear monitoring and follow‑up schedule helps maintain stability and prevent complications.
+                        </div>
                     </div>
                 </section>
 
@@ -286,8 +412,8 @@
                     </div>
                 </section>
 
-                <section class="section" aria-labelledby="education-heading">
-  <h2 id="education-heading">Kidney Disease Awareness – Public Education</h2>
+	                <section id="education" class="section" aria-labelledby="education-heading">
+	  <h2 id="education-heading">Kidney Disease Awareness – Public Education</h2>
 
   <p style="text-align:center;max-width:800px;margin:0 auto 1.5rem;color:#5d6d7e;">
     This visual presentation is designed for public awareness and patient empowerment.
@@ -314,12 +440,39 @@
       style="width:100%;height:100%;border:none;"
     ></iframe>
   </div>
-</section>
+	</section>
+
+                    <section id="faq" class="section faq" aria-labelledby="faq-heading">
+                        <h2 id="faq-heading">Frequently Asked Questions</h2>
+                        <div style="max-width:900px;margin:0 auto;text-align:left">
+                            <details>
+                                <summary>What should be brought to the first visit?</summary>
+                                <p>Carry a current medication list, recent lab reports, imaging (if available), and any previous discharge summaries. For diabetes or high blood pressure, bringing recent readings can be helpful.</p>
+                            </details>
+                            <details>
+                                <summary>When should a nephrologist be consulted?</summary>
+                                <p>Consider a consultation for persistent swelling, uncontrolled blood pressure, abnormal urine reports, reduced kidney function in labs, or kidney‑related symptoms advised by a physician. This page is educational and does not replace medical advice.</p>
+                            </details>
+                            <details>
+                                <summary>Is education and counseling part of the care?</summary>
+                                <p>Yes. Time is spent explaining the condition and the plan clearly so that patients and families can make informed decisions.</p>
+                            </details>
+                            <details>
+                                <summary>Does the site store form submissions?</summary>
+                                <p>No. Submitting the form opens a draft email in the device’s mail app. No messages are stored on the site.</p>
+                            </details>
+                        </div>
+                    </section>
 
                 <section id="contact" class="section contact" aria-labelledby="contact-heading">
                     <h2 id="contact-heading">Get in Touch</h2>
                     <div class="contact-card">
                         <h3>📧 For Consultations & Inquiries</h3>
+                        <div class="contact-actions" role="group" aria-label="Contact shortcuts">
+                            <a class="email-link" href="mailto:drvigneshsnephro@gmail.com?subject=Consultation%20Request">Email Directly</a>
+                            <button type="button" id="copyEmailBtn" aria-label="Copy email address">Copy Email</button>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Vijay%20Super%20Speciality%20Hospital%20%26%20Cancer%20Centre%20Dharmapuri" target="_blank" rel="noopener noreferrer" aria-label="Open directions in Google Maps">Directions</a>
+                        </div>
 
                         <!-- Simple JS-powered form that opens the user's mail client with prefilled content. No backend required. -->
                         <form id="contactForm" onsubmit="return handleContactSubmit(event)" aria-label="Contact form">
@@ -370,6 +523,8 @@
     <!-- Minimal, deferred JS: non-blocking, accessible, and small. -->
     <script defer>
     (function(){
+        const EMAIL = 'drvigneshsnephro@gmail.com';
+
         // Mobile menu
         const toggle = document.querySelector('.mobile-menu-toggle');
         const navLinks = document.querySelector('.nav-links');
@@ -402,6 +557,66 @@
         setAriaCurrent();
         window.addEventListener('hashchange', setAriaCurrent);
 
+        // Scrollspy: keep nav state updated as the user scrolls.
+        const sectionIds = ['about','services','conditions','education','faq','contact'];
+        const sections = sectionIds.map(id => document.getElementById(id)).filter(Boolean);
+        const byId = new Map(sectionIds.map(id => [id, document.querySelector('.nav-links a[href="#'+id+'"]')]));
+        if('IntersectionObserver' in window && sections.length){
+            const spy = new IntersectionObserver((entries)=>{
+                // pick the most visible intersecting section
+                const visible = entries
+                    .filter(e=>e.isIntersecting)
+                    .sort((a,b)=>b.intersectionRatio - a.intersectionRatio)[0];
+                if(!visible || !visible.target || !visible.target.id) return;
+                byId.forEach((link, id) => {
+                    if(!link) return;
+                    if(id === visible.target.id) link.setAttribute('aria-current','page');
+                    else link.removeAttribute('aria-current');
+                });
+            },{threshold:[0.12,0.25,0.5,0.75],rootMargin:'-20% 0px -65% 0px'});
+            sections.forEach(s=>spy.observe(s));
+        }
+
+        // Toast utility
+        let toastEl = document.querySelector('.toast');
+        if(!toastEl){
+            toastEl = document.createElement('div');
+            toastEl.className = 'toast';
+            toastEl.setAttribute('role','status');
+            toastEl.setAttribute('aria-live','polite');
+            document.body.appendChild(toastEl);
+        }
+        let toastTimer = null;
+        function showToast(text){
+            toastEl.textContent = text;
+            toastEl.classList.add('show');
+            clearTimeout(toastTimer);
+            toastTimer = setTimeout(()=>toastEl.classList.remove('show'), 2400);
+        }
+
+        // Copy email shortcut
+        const copyEmailBtn = document.getElementById('copyEmailBtn');
+        if(copyEmailBtn){
+            copyEmailBtn.addEventListener('click', async ()=>{
+                try{
+                    await navigator.clipboard.writeText(EMAIL);
+                    showToast('Email copied to clipboard');
+                }catch(e){
+                    // Fallback for older browsers
+                    const ta = document.createElement('textarea');
+                    ta.value = EMAIL;
+                    ta.setAttribute('readonly','');
+                    ta.style.position = 'absolute';
+                    ta.style.left = '-9999px';
+                    document.body.appendChild(ta);
+                    ta.select();
+                    try{ document.execCommand('copy'); showToast('Email copied'); }
+                    catch(err){ showToast('Copy not supported'); }
+                    document.body.removeChild(ta);
+                }
+            });
+        }
+
         // Simple contact form handler: open default mail client with prefilled values
         window.handleContactSubmit = function(e){
             e.preventDefault();
@@ -420,7 +635,7 @@
                 message
             ].filter(Boolean).join('%0D%0A');
 
-            const mailto = 'mailto:drvigneshsnephro@gmail.com'
+            const mailto = 'mailto:'+EMAIL
                          + '?subject=' + subject
                          + '&body=' + bodyLines;
 
