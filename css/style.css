@@ -147,13 +147,13 @@ nav {
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, var(--primary) 0%, #1e293b 100%);
-    color: #fff;
+    background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+    color: var(--primary);
     padding: 12px 28px;
     border-radius: var(--radius-full);
     font-weight: 600;
     text-decoration: none;
-    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.25);
+    box-shadow: 0 4px 12px rgba(14, 165, 233, 0.3);
     transition: transform 0.2s, box-shadow 0.2s;
     display: inline-flex;
     align-items: center;
@@ -165,7 +165,7 @@ nav {
 .btn-primary:hover {
     transform: translateY(-2px);
     box-shadow: 0 8px 16px rgba(15, 23, 42, 0.3);
-    color: #fff;
+    color: var(--primary);
 }
 
 .btn-primary::after {
@@ -551,4 +551,100 @@ footer {
 .floating-cta svg {
     width: 28px;
     height: 28px;
+}
+
+/* --- Article Pages (Re-optimized) --- */
+.article-hero {
+    background: linear-gradient(135deg, #e3f2fd 0%, #fff 100%);
+    padding: 8rem 0 4rem;
+    text-align: center;
+}
+
+.article-hero h1 {
+    font-size: 3rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary);
+}
+
+.article-hero p {
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.content-wrapper {
+    max-width: 800px;
+    margin: -3rem auto 0;
+    background: #fff;
+    padding: 3rem;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-xl);
+    position: relative;
+    z-index: 10;
+}
+
+/* Procedure Blocks */
+.procedure-block {
+    margin-bottom: 4rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.procedure-block:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.procedure-title {
+    color: var(--primary);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.procedure-icon {
+    width: 40px;
+    height: 40px;
+    background: #f0f9ff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent);
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+/* FAQ / Info Box */
+.faq-box {
+    background: #f8fafc;
+    padding: 1.5rem;
+    border-radius: var(--radius-md);
+    margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+    .content-wrapper {
+        padding: 1.5rem;
+        margin-top: -2rem;
+        width: 95%;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .article-hero h1 {
+        font-size: 2.5rem;
+    }
 }

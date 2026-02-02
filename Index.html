@@ -27,27 +27,36 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "MedicalBusiness",
-      "name": "Dr. Vignesh Subramani - Nephrology Services",
+      "@type": "Physician",
+      "name": "Dr. Vignesh",
       "image": "https://nephrofoundation.com/images/doctor-image.png",
       "@id": "https://nephrofoundation.com",
       "url": "https://nephrofoundation.com",
-      "telephone": "",
+      "telephone": "+91-9789698781",
       "priceRange": "Consultation fees vary",
       "address": {
         "@type": "PostalAddress",
+        "streetAddress": "Vijay Superspeciality Hospital and Cancer Centre",
         "addressLocality": "Dharmapuri",
         "addressRegion": "Tamil Nadu",
+        "postalCode": "636701",
         "addressCountry": "IN"
       },
-      "geo": {"@type":"GeoCoordinates","latitude":11.059821,"longitude":78.387451},
-      "openingHoursSpecification": [{
-          "@type":"OpeningHoursSpecification",
-          "dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],
-          "opens":"09:00",
-          "closes":"17:00"
-      }],
-      "sameAs": ["https://vijaysuperspecialityhospital.in"]
+      "medicalSpecialty": ["Nephrology", "Renal Transplant", "Dialysis"],
+      "alumniOf": [
+        { "@type": "CollegeOrUniversity", "name": "Madras Medical College (MBBS, MD)" },
+        { "@type": "CollegeOrUniversity", "name": "PGIMER Chandigarh (DM Nephrology)" },
+        { "@type": "CollegeOrUniversity", "name": "ESE Nephrology (UK)" }
+      ],
+      "availableService": [
+        { "@type": "MedicalTherapy", "name": "Hemodialysis" },
+        { "@type": "MedicalTherapy", "name": "Kidney Transplantation" },
+        { "@type": "MedicalTherapy", "name": "Glomerulonephritis Management" }
+      ],
+      "sameAs": [
+        "https://vijaysuperspecialityhospital.in",
+        "https://www.linkedin.com/in/dr-vignesh-subramani/"
+      ]
     }
     </script>
 
@@ -83,12 +92,12 @@
 </head>
 
 <body>
-    <a href="#main-content" class="skip-link">Skip to main content</a>
+
 
     <header>
         <nav class="container" role="navigation" aria-label="Main navigation">
             <a href="Index.html" class="brand">
-                <span class="brand-name">Dr. Vignesh Subramani</span>
+                <span class="brand-name">Dr. Vignesh</span>
                 <span class="brand-sub">NephroFoundation</span>
             </a>
             <button class="mobile-toggle" aria-label="Toggle menu" aria-expanded="false">
@@ -117,6 +126,9 @@
                     <h1 id="hero-heading">Uncompromising Care for Your Kidneys</h1>
                     <p class="subtitle">Trusted expertise from diagnosis to transplant. Helping you live a fuller,
                         healthier life with advanced renal care.</p>
+                    <p style="margin-bottom:2rem; font-size:0.95rem; color:var(--text-muted); font-weight:500;">
+                        MBBS, MD (Madras Medical College) • DM Nephrology (PGIMER Chandigarh) • ESE Nephrology (UK)
+                    </p>
 
                     <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:2rem;">
                         <a href="#contact" class="btn-primary">Schedule Appointment &rarr;</a>
@@ -366,16 +378,7 @@
                                 <p>Empowering you with knowledge about prevention and early detection.</p>
                             </div>
 
-                            <div
-                                style="position:relative; max-width:900px; margin:0 auto; border-radius:var(--radius-md); overflow:hidden; box-shadow:var(--shadow-xl);">
-                                <div style="padding-bottom:56.25%; position:relative;">
-                                    <iframe src="https://app.presentations.ai/view/LCmdVl9OF4"
-                                        title="Kidney Disease Awareness Presentation" allow="autoplay; clipboard-write"
-                                        loading="lazy"
-                                        style="position:absolute; top:0; left:0; width:100%; height:100%; border:none;">
-                                    </iframe>
-                                </div>
-                            </div>
+
 
                             <div style="text-align:center; margin-top:3rem;">
                                 <a href="education.html" class="btn-primary">Explore Education Library &rarr;</a>
@@ -454,7 +457,8 @@
                                     <form id="contactForm" onsubmit="return handleContactSubmit(event)"
                                         aria-label="Contact form" class="contact-form"
                                         style="background:white; padding:2rem; border-radius:var(--radius-md); box-shadow:var(--shadow-lg);">
-                                        <h3 style="color:var(--text); margin-bottom:1.5rem; font-size:1.25rem;">Send a
+                                        <h3 style="color:var(--text-main); margin-bottom:1.5rem; font-size:1.25rem;">
+                                            Send a
                                             Message</h3>
                                         <input type="text" id="name" name="name" placeholder="Your Name" required
                                             aria-label="Your name"
@@ -495,7 +499,7 @@
     <footer role="contentinfo">
         <div class="container footer-grid">
             <div class="footer-brand">
-                <span class="brand-name" style="font-size:1.5rem; color:white;">Dr. Vignesh Subramani</span>
+                <span class="brand-name" style="font-size:1.5rem; color:white;">Dr. Vignesh</span>
                 <p style="margin-top:0.5rem; opacity:0.8;">NephroFoundation</p>
             </div>
             <div class="footer-links">
