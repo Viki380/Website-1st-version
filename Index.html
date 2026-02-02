@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dr. Vignesh Subramani | Expert Nephrologist Tamil Nadu | Nephrofoundation</title>
-    <meta name="description" content="Dr. Vignesh Subramani - Consultant Nephrologist. Renal transplant care, dialysis, CKD management. Email: drvigneshsnephro@gmail.com">
-    <meta name="keywords" content="nephrologist tamil nadu, kidney doctor tamil nadu, nephrology, dialysis, kidney transplant">
+    <meta name="description"
+        content="Dr. Vignesh Subramani - Consultant Nephrologist. Renal transplant care, dialysis, CKD management. Email: drvigneshsnephro@gmail.com">
+    <meta name="keywords"
+        content="nephrologist tamil nadu, kidney doctor tamil nadu, nephrology, dialysis, kidney transplant">
     <meta name="author" content="Dr. Vignesh Subramani">
     <link rel="canonical" href="https://nephrofoundation.com">
 
@@ -13,162 +16,12 @@
     <link rel="preload" href="images/doctor-image.webp" as="image">
     <link rel="preconnect" href="https://maps.googleapis.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
 
-    <!-- Small CSS polish: keep original design but improve spacing and touch targets -->
-    <style>
-        :root{
-            --primary:#2c5aa0;
-            --muted:#5d6d7e;
-            --bg1:#f5f7fa;
-            --bg2:#c3cfe2;
-            --content-bg:#ffffff;
-            --accent1:#3498db;
-            --accent2:#2980b9;
-            --text:#2c3e50;
-            --radius:14px;
-        }
-        *{box-sizing:border-box}
-        html,body{height:100%}
-        body{
-            font-family: Georgia, 'Times New Roman', serif;
-            background: linear-gradient(135deg,var(--bg1) 0%,var(--bg2) 100%);
-            color:var(--text);
-            line-height:1.6;
-            -webkit-font-smoothing:antialiased;
-            -moz-osx-font-smoothing:grayscale;
-            -webkit-tap-highlight-color:transparent
-        }
-        .container{max-width:1200px;margin:0 auto;padding:0 20px}
-
-        /* Skip link */
-        .skip-link{position:absolute;top:-40px;left:6px;background:var(--primary);color:#fff;padding:8px;border-radius:6px;z-index:9999}
-        .skip-link:focus{top:6px}
-
-        header{background:rgba(255,255,255,0.98);backdrop-filter:blur(12px);position:sticky;top:0;z-index:1000;border-bottom:3px solid var(--primary);box-shadow:0 4px 20px rgba(0,0,0,0.06)}
-        nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0;gap:12px}
-        .logo{font-size:1.95rem;font-weight:700;color:var(--text);letter-spacing:-0.6px}
-        .logo::after{content:'For your kidneys';display:block;font-size:0.55em;color:var(--primary);opacity:0.9;margin-top:-0.2rem}
-
-        .nav-links{display:flex;gap:22px;align-items:center;list-style:none}
-        .nav-links a{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;color:#34495e;font-weight:500;font-size:0.96rem;padding:10px 6px;border-radius:8px;min-height:44px;min-width:44px}
-        .nav-links a:focus,.nav-links a:hover{color:var(--primary);outline:2px solid transparent}
-        .nav-links a[aria-current="page"]{color:var(--primary);font-weight:600}
-
-        .mobile-menu-toggle{display:none;background:none;border:0;font-size:1.4rem;cursor:pointer}
-
-        /* Hero */
-        .hero{background:linear-gradient(135deg,#2c3e50 0%,#34495e 100%);color:#fff;padding:4.5rem 0;text-align:center;position:relative;overflow:hidden}
-        .hero::before{
-            content:"";
-            position:absolute;
-            inset:-40%;
-            background:
-              radial-gradient(circle at 20% 20%, rgba(52,152,219,0.35) 0%, rgba(52,152,219,0) 55%),
-              radial-gradient(circle at 80% 25%, rgba(41,128,185,0.35) 0%, rgba(41,128,185,0) 60%),
-              radial-gradient(circle at 55% 85%, rgba(255,255,255,0.10) 0%, rgba(255,255,255,0) 58%);
-            filter: blur(10px);
-            transform: translateZ(0);
-            opacity:0.9;
-        }
-        .hero-content{max-width:840px;margin:0 auto;position:relative;z-index:2}
-        .hero h1{font-size:2.9rem;font-weight:300;margin-bottom:0.6rem}
-        .subtitle{font-size:1.25rem;margin-bottom:0.6rem;opacity:0.95}
-        .credentials{font-size:0.98rem;font-style:italic;margin-bottom:1.25rem;opacity:0.9}
-
-        .doctor-image{display:inline-block;margin:1.6rem 0;position:relative}
-        .doctor-image img{width:240px;height:240px;border-radius:50%;object-fit:cover;box-shadow:0 15px 40px rgba(0,0,0,0.14);transition:transform .28s ease,box-shadow .28s ease}
-        .doctor-image:hover img{transform:scale(1.03)}
-
-        .motto{max-width:640px;margin:1rem auto 1.6rem;padding:1.25rem;background:rgba(255,255,255,0.06);border-radius:12px;font-style:italic}
-        .cta-row{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:0.5rem}
-        .cta-button,.secondary-button{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:46px}
-        .cta-button{background:linear-gradient(45deg,var(--accent1),var(--accent2));color:#fff;padding:12px 22px;border-radius:28px;text-decoration:none;font-weight:600;box-shadow:0 6px 20px rgba(52,152,219,0.28)}
-        .secondary-button{background:rgba(255,255,255,0.12);color:#fff;padding:12px 18px;border-radius:28px;text-decoration:none;font-weight:600;border:1px solid rgba(255,255,255,0.22)}
-        .cta-button:focus,.cta-button:hover,.secondary-button:focus,.secondary-button:hover{transform:translateY(-3px)}
-
-        .chip-row{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:1rem auto 0;max-width:860px}
-        .chip{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;background:rgba(255,255,255,0.10);border:1px solid rgba(255,255,255,0.18);font-size:0.92rem;opacity:0.98}
-        .chip svg{width:16px;height:16px;flex:0 0 16px}
-
-        .main-content{background:var(--content-bg);margin:2.5rem 0;border-radius:20px;box-shadow:0 10px 40px rgba(0,0,0,0.08);overflow:hidden}
-        .section{padding:3.2rem}
-        .section h2{text-align:center;font-size:2.05rem;margin-bottom:1.4rem;color:var(--text)}
-        .section h2::after{content:'';display:block;margin:10px auto 0;width:80px;height:3px;background:linear-gradient(45deg,var(--accent1),var(--accent2));border-radius:2px}
-
-        .hospital-info{background:linear-gradient(135deg,#ecf0f1 0%,#d5dbdb 100%);text-align:center;padding:2rem}
-        .hospital-card{background:#fff;padding:1.8rem;border-radius:12px;max-width:720px;margin:0 auto;border-top:4px solid var(--primary);box-shadow:0 8px 25px rgba(0,0,0,0.08)}
-
-        .qual-grid,.services-grid,.conditions-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.6rem}
-        .qual-card,.service-card{background:#fff;padding:1.6rem;border-radius:12px;box-shadow:0 8px 25px rgba(0,0,0,0.06);transition:transform .28s ease}
-        .qual-card:hover,.service-card:hover{transform:translateY(-6px)}
-
-        .condition-item{background:linear-gradient(135deg,var(--accent1),var(--accent2));color:#fff;padding:1.25rem;border-radius:10px;text-align:center}
-
-        /* Highlights / process */
-        .highlights{background:linear-gradient(135deg,#ffffff 0%,#f6f9ff 100%)}
-        .highlight-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.2rem;margin-top:1.6rem}
-        .highlight-card{background:#fff;border:1px solid #eef2f6;border-radius:14px;padding:1.25rem;box-shadow:0 10px 24px rgba(0,0,0,0.05)}
-        .highlight-title{display:flex;align-items:center;gap:10px;margin:0 0 0.4rem}
-        .highlight-title svg{width:20px;height:20px;flex:0 0 20px}
-        .highlight-card p{margin:0;color:var(--muted)}
-        .process{margin-top:2rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem}
-        .step{border-radius:14px;padding:1.25rem;background:linear-gradient(135deg,#ecf4ff 0%,#ffffff 55%);border:1px solid #e7eef8}
-        .step strong{display:block;margin-bottom:0.3rem}
-
-        /* FAQ */
-        .faq{background:linear-gradient(135deg,#f7fbff 0%,#ffffff 100%)}
-        details{background:#fff;border:1px solid #e9eef5;border-radius:12px;padding:14px 16px;box-shadow:0 10px 24px rgba(0,0,0,0.04)}
-        details + details{margin-top:12px}
-        summary{cursor:pointer;font-weight:700;color:#233244;list-style:none}
-        summary::-webkit-details-marker{display:none}
-        summary:after{content:"+";float:right;font-weight:800;color:var(--primary)}
-        details[open] summary:after{content:"–"}
-        details p{margin:0.8rem 0 0;color:var(--muted)}
-
-        .contact{background:linear-gradient(135deg,#2c3e50 0%,#34495e 100%);color:#fff;text-align:center}
-        .contact-card{background:rgba(255,255,255,0.04);padding:2rem;border-radius:16px;max-width:720px;margin:1rem auto}
-        .email-link{display:inline-block;background:linear-gradient(45deg,var(--accent1),var(--accent2));color:#fff;padding:12px 22px;border-radius:28px;text-decoration:none;font-weight:500}
-        .contact-actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:0.8rem 0 0.4rem}
-        .contact-actions a,.contact-actions button{border-radius:999px;padding:10px 14px;border:1px solid rgba(255,255,255,0.20);background:rgba(255,255,255,0.10);color:#fff;font-weight:700;cursor:pointer;min-height:44px}
-        .contact-actions a:hover,.contact-actions button:hover{transform:translateY(-2px)}
-        .contact-actions .email-link{background:linear-gradient(45deg,var(--accent1),var(--accent2));border-color:transparent}
-
-        /* Toast */
-        .toast{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);background:rgba(22,32,40,0.92);color:#fff;padding:10px 14px;border-radius:12px;box-shadow:0 16px 35px rgba(0,0,0,0.28);opacity:0;pointer-events:none;transition:opacity .25s ease, transform .25s ease;z-index:99999}
-        .toast.show{opacity:1;transform:translateX(-50%) translateY(-6px)}
-
-        footer{background:#162028;color:#bfc8cc;text-align:center;padding:2rem 0}
-
-        /* Floating CTA */
-        .floating-cta{position:fixed;right:18px;bottom:18px;background:linear-gradient(45deg,var(--accent1),var(--accent2));color:#fff;padding:12px 16px;border-radius:999px;box-shadow:0 12px 30px rgba(0,0,0,0.25);z-index:9999;text-decoration:none;font-weight:600;display:inline-flex;align-items:center;gap:10px}
-        .floating-cta svg{width:20px;height:20px}
-
-        /* Contact form fields */
-        .contact-form{display:grid;gap:12px;grid-template-columns:1fr 1fr;margin-top:1rem}
-        .contact-form .full{grid-column:1/-1}
-        input,textarea{padding:10px;border-radius:8px;border:1px solid #cfd8dc;font-size:0.95rem}
-        textarea{resize:vertical;min-height:120px}
-        .form-note{font-size:0.92rem;opacity:0.9}
-        .submit-btn{background:linear-gradient(45deg,var(--accent1),var(--accent2));color:#fff;padding:10px 16px;border-radius:10px;border:0;font-weight:600}
-
-        /* Responsive */
-        @media(max-width:768px){
-            .mobile-menu-toggle{display:block}
-            .nav-links{display:none;position:absolute;left:0;right:0;top:100%;background:rgba(255,255,255,0.98);flex-direction:column;padding:8px 0;box-shadow:0 6px 24px rgba(0,0,0,0.12)}
-            .nav-links.active{display:flex}
-            .doctor-image img{width:150px;height:150px}
-            .section{padding:2rem}
-            .contact-form{grid-template-columns:1fr}
-            .cta-row{gap:10px}
-            .floating-cta{right:12px;bottom:12px;padding:10px 12px}
-        }
-
-        /* Reduce motion */
-        @media (prefers-reduced-motion: reduce){*{transition:none!important}}
-
-        /* Focus outlines */
-        :focus{outline:2px solid var(--accent1);outline-offset:3px}
-    </style>
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
 
     <!-- Structured data: LocalBusiness + FAQ -->
     <script type="application/ld+json">
@@ -228,450 +81,451 @@
     </script>
 
 </head>
+
 <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
     <header>
         <nav class="container" role="navigation" aria-label="Main navigation">
-            <div class="logo">Nephrofoundation</div>
-            <button class="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false">☰</button>
+            <a href="Index.html" class="brand">
+                <span class="brand-name">Dr. Vignesh Subramani</span>
+                <span class="brand-sub">NephroFoundation</span>
+            </a>
+            <button class="mobile-toggle" aria-label="Toggle menu" aria-expanded="false">
+                <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="2" fill="none">
+                    <path d="M3 12h18M3 6h18M3 18h18" />
+                </svg>
+            </button>
             <ul class="nav-links" role="menubar">
                 <li role="none"><a href="#about" role="menuitem">About</a></li>
                 <li role="none"><a href="#services" role="menuitem">Services</a></li>
-                <li role="none"><a href="#conditions" role="menuitem">Conditions</a></li>
-                <li role="none"><a href="#education" role="menuitem">Education</a></li>
-                <li role="none"><a href="#faq" role="menuitem">FAQ</a></li>
+                <li role="none"><a href="education.html" role="menuitem">Education</a></li>
                 <li role="none"><a href="#contact" role="menuitem">Contact</a></li>
+                <li role="none"><a href="#contact" class="btn-primary" style="padding: 10px 24px;">Book Consultation</a>
+                </li>
             </ul>
         </nav>
     </header>
 
     <main id="main-content">
-        <section class="hero" aria-labelledby="hero-heading">
-            <div class="container hero-content">
-                <h1 id="hero-heading">Dr. Vignesh Subramani</h1>
-                <p class="subtitle">Consultant Nephrologist</p>
-                <p class="credentials">MBBS, MD General Medicine, DM Nephrology (PGIMER Chandigarh)</p>
+        <section class="hero-wrapper" aria-labelledby="hero-heading">
+            <div class="container hero-layout">
+                <div class="hero-text">
+                    <span class="brand-sub"
+                        style="display:inline-block; margin-bottom:1rem;color:var(--accent-dark);">WORLD-CLASS
+                        NEPHROLOGY</span>
+                    <h1 id="hero-heading">Uncompromising Care for Your Kidneys</h1>
+                    <p class="subtitle">Trusted expertise from diagnosis to transplant. Helping you live a fuller,
+                        healthier life with advanced renal care.</p>
 
-                <div class="doctor-image" aria-hidden="false">
+                    <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:2rem;">
+                        <a href="#contact" class="btn-primary">Schedule Appointment &rarr;</a>
+                        <a href="education.html" class="btn-secondary">Patient Resources</a>
+                    </div>
+
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <strong>10+</strong>
+                            <span>Years Exp</span>
+                        </div>
+                        <div class="stat-item">
+                            <strong>5k+</strong>
+                            <span>Patients</span>
+                        </div>
+                        <div class="stat-item">
+                            <strong>100%</strong>
+                            <span>Dedication</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-image-container">
+                    <div class="hero-image-blob"></div>
                     <picture>
                         <source srcset="images/doctor-image.webp" type="image/webp">
-                        <img src="images/doctor-image.png" alt="Dr. Vignesh Subramani - Nephrologist" loading="lazy" width="240" height="240">
+                        <img src="images/doctor-image.png" alt="Dr. Vignesh Subramani" class="doctor-portrait"
+                            width="450" height="450">
                     </picture>
-                </div>
-
-                <div class="motto">
-                    Your kidney health deserves more than just treatment – Because every kidney deserves expert care, and every patient deserves to be heard.
-                </div>
-
-                <div class="cta-row" role="group" aria-label="Primary actions">
-                    <a href="#contact" class="cta-button">Schedule Consultation</a>
-                    <a href="#services" class="secondary-button">Explore Services</a>
-                    <a href="#education" class="secondary-button">Watch Awareness Talk</a>
-                </div>
-
-                <div class="chip-row" aria-label="Care approach highlights">
-                    <span class="chip">
-                        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                        Clear explanations
-                    </span>
-                    <span class="chip">
-                        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s-7-4.4-7-11a4 4 0 0 1 7-2 4 4 0 0 1 7 2c0 6.6-7 11-7 11Z" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                        Compassionate care
-                    </span>
-                    <span class="chip">
-                        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12h6l2-4 2 8 2-4h4" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                        Evidence-based plans
-                    </span>
                 </div>
             </div>
         </section>
-        
+
         <div class="container">
             <div class="main-content">
-                <section class="hospital-info" aria-labelledby="hospital-heading">
-                    <div class="hospital-card">
-                        <h3 id="hospital-heading">Currently serving at</h3>
-                        <p><a href="https://vijaysuperspecialityhospital.in" target="_blank" rel="noopener noreferrer"><strong>Vijay Superspeciality Hospital and Cancer Centre, Dharmapuri</strong></a></p>
-                        <p><em>Providing comprehensive nephrology care with advanced medical facilities and dedicated patient support.</em></p>
-                    </div>
-                </section>
+                <div class="container">
+                    <div class="main-content">
+                        <section class="section section-alt" aria-labelledby="hospital-heading">
+                            <div class="section-head">
+                                <h2 id="hospital-heading">Currently Serving At</h2>
+                                <a href="https://vijaysuperspecialityhospital.in" target="_blank"
+                                    rel="noopener noreferrer"
+                                    style="font-size:1.25rem; font-weight:600; text-decoration:none; color:var(--primary);">
+                                    Vijay Superspeciality Hospital and Cancer Centre, Dharmapuri
+                                </a>
+                                <p style="margin-top:0.5rem; color:var(--text-muted);"> Providing comprehensive
+                                    nephrology care with advanced medical facilities and dedicated patient support.</p>
+                            </div>
+                        </section>
 
-                <section class="section highlights" aria-labelledby="highlights-heading">
-                    <h2 id="highlights-heading">A Patient‑First Approach</h2>
-                    <p style="text-align:center;max-width:860px;margin:0 auto;color:var(--muted)">
-                        The focus is on careful evaluation, clear communication, and long‑term kidney health—so patients feel informed and supported at every step.
-                    </p>
+                        <section class="section highlights" aria-labelledby="highlights-heading">
+                            <div class="section-head">
+                                <h2 id="highlights-heading">A Patient‑First Approach</h2>
+                                <p>The focus is on careful evaluation, clear communication, and long‑term kidney
+                                    health—so patients feel informed and supported at every step.</p>
+                            </div>
 
-                    <div class="highlight-grid" role="list" aria-label="Key highlights">
-                        <article class="highlight-card" role="listitem">
-                            <h3 class="highlight-title">
-                                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 19V5a2 2 0 0 1 2-2h9l5 5v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z" stroke="#2c5aa0" stroke-width="1.7"/><path d="M9 13h6M9 17h6M9 9h3" stroke="#2c5aa0" stroke-width="1.7" stroke-linecap="round"/></svg>
-                                Personalized plans
-                            </h3>
-                            <p>Recommendations are aligned to medical history, labs, and lifestyle—without unnecessary complexity.</p>
-                        </article>
-                        <article class="highlight-card" role="listitem">
-                            <h3 class="highlight-title">
-                                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2v6" stroke="#2c5aa0" stroke-width="1.7" stroke-linecap="round"/><path d="M12 16v6" stroke="#2c5aa0" stroke-width="1.7" stroke-linecap="round"/><path d="M4 12h6" stroke="#2c5aa0" stroke-width="1.7" stroke-linecap="round"/><path d="M14 12h6" stroke="#2c5aa0" stroke-width="1.7" stroke-linecap="round"/><path d="M7.5 7.5l3 3" stroke="#2c5aa0" stroke-width="1.7" stroke-linecap="round"/><path d="M13.5 13.5l3 3" stroke="#2c5aa0" stroke-width="1.7" stroke-linecap="round"/><path d="M16.5 7.5l-3 3" stroke="#2c5aa0" stroke-width="1.7" stroke-linecap="round"/><path d="M10.5 13.5l-3 3" stroke="#2c5aa0" stroke-width="1.7" stroke-linecap="round"/></svg>
-                                Clear next steps
-                            </h3>
-                            <p>Each visit aims to leave patients with a simple plan: what to do now, what to monitor, and when to follow up.</p>
-                        </article>
-                        <article class="highlight-card" role="listitem">
-                            <h3 class="highlight-title">
-                                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s-7-4.4-7-11a4 4 0 0 1 7-2 4 4 0 0 1 7 2c0 6.6-7 11-7 11Z" stroke="#2c5aa0" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                                Supportive counseling
-                            </h3>
-                            <p>Time is spent on education—helping families understand kidney health and treatment choices.</p>
-                        </article>
-                    </div>
+                            <div class="card-grid" role="list" aria-label="Key highlights">
+                                <article class="feature-card" role="listitem">
+                                    <div class="card-icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                        </svg>
+                                    </div>
+                                    <h3>Personalized Plans</h3>
+                                    <p>Recommendations are aligned to medical history, labs, and lifestyle—without
+                                        unnecessary complexity.</p>
+                                </article>
 
-                    <div class="process" aria-label="What to expect">
-                        <div class="step">
-                            <strong>1) Listen & Review</strong>
-                            Past records, symptoms, medications, and risk factors are reviewed carefully.
-                        </div>
-                        <div class="step">
-                            <strong>2) Explain & Decide</strong>
-                            Options are discussed in plain language, including benefits, risks, and practical steps.
-                        </div>
-                        <div class="step">
-                            <strong>3) Follow‑up Plan</strong>
-                            A clear monitoring and follow‑up schedule helps maintain stability and prevent complications.
-                        </div>
-                    </div>
-                </section>
+                                <article class="feature-card" role="listitem">
+                                    <div class="card-icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                        </svg>
+                                    </div>
+                                    <h3>Clear Next Steps</h3>
+                                    <p>Each visit aims to leave patients with a simple plan: what to do now, what to
+                                        monitor, and when to follow up.</p>
+                                </article>
 
-                <section id="about" class="section qualifications" aria-labelledby="qualifications-heading">
-                    <h2 id="qualifications-heading">Medical Qualifications</h2>
-                    <div class="qual-grid">
-                        <article class="qual-card">
-                            <h3>Bachelor of Medicine & Surgery</h3>
-                            <p>MBBS from Madras Medical College, Chennai<br>Foundation in comprehensive medical care</p>
-                        </article>
-                        <article class="qual-card">
-                            <h3>Master of Medicine</h3>
-                            <p>MD in General Medicine from Madras Medical College<br>Specialization in internal medicine</p>
-                        </article>
-                        <article class="qual-card">
-                            <h3>Doctorate in Nephrology</h3>
-                            <p>DM in Nephrology from PGIMER Chandigarh<br>Advanced training in kidney diseases and transplantation</p>
-                        </article>
-                    </div>
-                </section>
+                                <article class="feature-card" role="listitem">
+                                    <div class="card-icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path
+                                                d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                                        </svg>
+                                    </div>
+                                    <h3>Supportive Counseling</h3>
+                                    <p>Time is spent on education—helping families understand kidney health and
+                                        treatment choices.</p>
+                                </article>
+                            </div>
+                        </section>
 
-                <section id="services" class="section services" aria-labelledby="services-heading">
-                    <h2 id="services-heading">Specialized Medical Services</h2>
-                    <div class="services-grid">
-                        <article class="service-card">
-                            <h3>Comprehensive Kidney Care</h3>
-                            <p>Complete evaluation and management of all kidney-related conditions with personalized treatment plans tailored to each patient's unique needs.</p>
-                        </article>
-                        <article class="service-card">
-                            <h3>Renal Biopsy</h3>
-                            <p>Precision kidney biopsy procedures using advanced techniques for accurate diagnosis of complex renal conditions.</p>
-                        </article>
-                        <article class="service-card">
-                            <h3>Dialysis Access Procedures</h3>
-                            <p>Expert placement of permanent catheters and creation of arteriovenous fistulas for optimal dialysis access and patient comfort.</p>
-                        </article>
-                        <article class="service-card">
-                            <h3>Transplant Management</h3>
-                            <p>Comprehensive pre-transplant evaluation and post-transplant care ensuring the best possible outcomes for kidney transplant patients.</p>
-                        </article>
-                        <article class="service-card">
-                            <h3>Chronic Disease Management</h3>
-                            <p>Long-term care strategies for chronic kidney conditions, focusing on slowing progression and improving quality of life.</p>
-                        </article>
-                        <article class="service-card">
-                            <h3>Patient Education & Counseling</h3>
-                            <p>Detailed explanations of kidney conditions, treatment options, and lifestyle modifications to empower informed healthcare decisions.</p>
-                        </article>
-                    </div>
-                </section>
+                        <section id="about" class="section section-alt" aria-labelledby="qualifications-heading">
+                            <div class="section-head">
+                                <h2 id="qualifications-heading">Medical Qualifications</h2>
+                                <p style="color:var(--text-muted);">A foundation of excellence in medical education and
+                                    specialized training.</p>
+                            </div>
+                            <div class="card-grid">
+                                <article class="feature-card">
+                                    <div class="card-icon" style="background:#fff3e0; color:#f57c00;">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M12 14l9-5-9-5-9 5 9 5z" />
+                                            <path
+                                                d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+                                            <path
+                                                d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+                                        </svg>
+                                    </div>
+                                    <h3>DM Nephrology</h3>
+                                    <p>PGIMER Chandigarh<br><span
+                                            style="font-size:0.9rem; color:var(--text-muted);">Advanced training in
+                                            kidney diseases and transplantation.</span></p>
+                                </article>
+                                <article class="feature-card">
+                                    <div class="card-icon" style="background:#e8f5e9; color:#2e7d32;">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path
+                                                d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                                        </svg>
+                                    </div>
+                                    <h3>MD General Medicine</h3>
+                                    <p>Madras Medical College<br><span
+                                            style="font-size:0.9rem; color:var(--text-muted);">Specialization in
+                                            internal medicine.</span></p>
+                                </article>
+                                <article class="feature-card">
+                                    <div class="card-icon" style="background:#e3f2fd; color:#1565c0;">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path
+                                                d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                                        </svg>
+                                    </div>
+                                    <h3>MBBS</h3>
+                                    <p>Madras Medical College<br><span
+                                            style="font-size:0.9rem; color:var(--text-muted);">Foundation in
+                                            comprehensive medical care.</span></p>
+                                </article>
+                            </div>
+                        </section>
 
-                <section id="conditions" class="section" aria-labelledby="conditions-heading">
-                    <h2 id="conditions-heading">Kidney Conditions & Expertise</h2>
-                    <div class="conditions-grid" role="list">
-                        <div class="condition-item" role="listitem">Chronic Kidney Disease</div>
-                        <div class="condition-item" role="listitem">Acute Kidney Injury</div>
-                        <div class="condition-item" role="listitem">Diabetic Nephropathy</div>
-                        <div class="condition-item" role="listitem">Hypertensive Kidney Disease</div>
-                        <div class="condition-item" role="listitem">Glomerulonephritis</div>
-                        <div class="condition-item" role="listitem">Polycystic Kidney Disease</div>
-                        <div class="condition-item" role="listitem">Nephrotic Syndrome</div>
-                        <div class="condition-item" role="listitem">Nephritic Syndrome</div>
-                        <div class="condition-item" role="listitem">Kidney Stone Disease</div>
-                        <div class="condition-item" role="listitem">Dialysis Care</div>
-                        <div class="condition-item" role="listitem">Transplant Care</div>
-                        <div class="condition-item" role="listitem">Electrolyte Disorders</div>
-                        <div class="condition-item" role="listitem">Proteinuria & Hematuria</div>
-                        <div class="condition-item" role="listitem">Urinary Tract Infections</div>
-                        <div class="condition-item" role="listitem">Acid-Base Disorders</div>
-                    </div>
-                </section>
+                        <section id="services" class="section" aria-labelledby="services-heading">
+                            <div class="section-head">
+                                <h2 id="services-heading">Specialized Services</h2>
+                                <p>Compassionate, expert care for every stage of kidney health.</p>
+                            </div>
+                            <div class="card-grid">
+                                <article class="feature-card">
+                                    <h3>Comprehensive Kidney Care</h3>
+                                    <p>Complete management of CKD, ensuring personalized treatment plans tailored to
+                                        each patient's unique needs.</p>
+                                </article>
+                                <article class="feature-card">
+                                    <h3>Renal Biopsy</h3>
+                                    <p>Precision procedures using advanced techniques for accurate diagnosis of complex
+                                        renal conditions.</p>
+                                </article>
+                                <article class="feature-card">
+                                    <h3>Dialysis Access</h3>
+                                    <p>Expert placement of catheters and AV fistulas for optimal dialysis access and
+                                        comfort.</p>
+                                </article>
+                                <article class="feature-card">
+                                    <h3>Transplant Management</h3>
+                                    <p>Pre-transplant evaluation and post-transplant care ensuring the best possible
+                                        outcomes.</p>
+                                </article>
+                                <article class="feature-card">
+                                    <h3>Chronic Disease Mgt</h3>
+                                    <p>Strategies for slowing progression and improving quality of life for long-term
+                                        conditions.</p>
+                                </article>
+                                <article class="feature-card"
+                                    style="border: 2px solid var(--accent); background: #f0f9ff;">
+                                    <h3 style="color:var(--accent-dark);">Patient Education</h3>
+                                    <p>Empowering you with knowledge about your condition and lifestyle choices.</p>
+                                    <a href="education.html"
+                                        style="color:var(--accent-dark); font-weight:700; text-decoration:none; margin-top:0.5rem; display:block;">View
+                                        Library &rarr;</a>
+                                </article>
+                            </div>
+                        </section>
 
-	                <section id="education" class="section" aria-labelledby="education-heading">
-	  <h2 id="education-heading">Kidney Disease Awareness – Public Education</h2>
-
-  <p style="text-align:center;max-width:800px;margin:0 auto 1.5rem;color:#5d6d7e;">
-    This visual presentation is designed for public awareness and patient empowerment.
-    It focuses on early detection, prevention, and asking the right questions —
-    not on clinical branding or patient recruitment.
-  </p>
-
-  <div style="
-      width:100%;
-      max-width:900px;
-      aspect-ratio:16/9;
-      margin:auto;
-      border:2px solid #dee1e5;
-      border-radius:12px;
-      overflow:hidden;
-      box-shadow:0 10px 30px rgba(0,0,0,0.08);
-  ">
-    <iframe
-      src="https://app.presentations.ai/view/LCmdVl9OF4"
-      title="Kidney Disease Awareness Presentation"
-      allow="autoplay; clipboard-write"
-      loading="lazy"
-      referrerpolicy="no-referrer"
-      style="width:100%;height:100%;border:none;"
-    ></iframe>
-  </div>
-	</section>
-
-                    <section id="faq" class="section faq" aria-labelledby="faq-heading">
-                        <h2 id="faq-heading">Frequently Asked Questions</h2>
-                        <div style="max-width:900px;margin:0 auto;text-align:left">
-                            <details>
-                                <summary>What should be brought to the first visit?</summary>
-                                <p>Carry a current medication list, recent lab reports, imaging (if available), and any previous discharge summaries. For diabetes or high blood pressure, bringing recent readings can be helpful.</p>
-                            </details>
-                            <details>
-                                <summary>When should a nephrologist be consulted?</summary>
-                                <p>Consider a consultation for persistent swelling, uncontrolled blood pressure, abnormal urine reports, reduced kidney function in labs, or kidney‑related symptoms advised by a physician. This page is educational and does not replace medical advice.</p>
-                            </details>
-                            <details>
-                                <summary>Is education and counseling part of the care?</summary>
-                                <p>Yes. Time is spent explaining the condition and the plan clearly so that patients and families can make informed decisions.</p>
-                            </details>
-                            <details>
-                                <summary>Does the site store form submissions?</summary>
-                                <p>No. Submitting the form opens a draft email in the device’s mail app. No messages are stored on the site.</p>
-                            </details>
-                        </div>
-                    </section>
-
-                <section id="contact" class="section contact" aria-labelledby="contact-heading">
-                    <h2 id="contact-heading">Get in Touch</h2>
-                    <div class="contact-card">
-                        <h3>📧 For Consultations & Inquiries</h3>
-                        <div class="contact-actions" role="group" aria-label="Contact shortcuts">
-                            <a class="email-link" href="mailto:drvigneshsnephro@gmail.com?subject=Consultation%20Request">Email Directly</a>
-                            <button type="button" id="copyEmailBtn" aria-label="Copy email address">Copy Email</button>
-                            <a href="https://www.google.com/maps/search/?api=1&query=Vijay%20Super%20Speciality%20Hospital%20%26%20Cancer%20Centre%20Dharmapuri" target="_blank" rel="noopener noreferrer" aria-label="Open directions in Google Maps">Directions</a>
-                        </div>
-
-                        <!-- Simple JS-powered form that opens the user's mail client with prefilled content. No backend required. -->
-                        <form id="contactForm" onsubmit="return handleContactSubmit(event)" aria-label="Contact form">
-                            <div class="contact-form">
-                                <input type="text" id="name" name="name" placeholder="Your full name" required aria-label="Your name">
-                                <input type="email" id="email" name="email" placeholder="Your email" required aria-label="Your email">
-                                <input type="text" id="phone" name="phone" placeholder="Phone (optional)" aria-label="Phone">
-                                <input type="text" id="subject" name="subject" placeholder="Reason for contact" required aria-label="Subject">
-                                <textarea id="message" name="message" class="full" placeholder="Describe your concern or inquiry" required aria-label="Message"></textarea>
-                                <div class="full">
-                                    <p class="form-note">By submitting this form your mail client will open with a draft email. No data is stored on this site. For better privacy send a direct email to drvigneshsnephro@gmail.com.</p>
+                        <section id="conditions" class="section section-alt" aria-labelledby="conditions-heading">
+                            <div class="section-head">
+                                <h2 id="conditions-heading">Conditions & Expertise</h2>
+                                <p>Specialized care for a wide range of renal disorders.</p>
+                            </div>
+                            <div class="card-grid"
+                                style="grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));">
+                                <div class="feature-card"
+                                    style="padding:1.5rem; display:flex; align-items:center; gap:12px;">
+                                    <div style="width:10px; height:10px; background:var(--accent); border-radius:50%;">
+                                    </div>
+                                    <span style="font-weight:600;">CKD Stages 1-5</span>
                                 </div>
-                                <div class="full" style="text-align:center;margin-top:6px">
-                                    <button type="submit" class="submit-btn">Send Email</button>
+                                <div class="feature-card"
+                                    style="padding:1.5rem; display:flex; align-items:center; gap:12px;">
+                                    <div style="width:10px; height:10px; background:var(--accent); border-radius:50%;">
+                                    </div>
+                                    <span style="font-weight:600;">Kidney Stones</span>
+                                </div>
+                                <div class="feature-card"
+                                    style="padding:1.5rem; display:flex; align-items:center; gap:12px;">
+                                    <div style="width:10px; height:10px; background:var(--accent); border-radius:50%;">
+                                    </div>
+                                    <span style="font-weight:600;">HTN Kidney Disease</span>
+                                </div>
+                                <div class="feature-card"
+                                    style="padding:1.5rem; display:flex; align-items:center; gap:12px;">
+                                    <div style="width:10px; height:10px; background:var(--accent); border-radius:50%;">
+                                    </div>
+                                    <span style="font-weight:600;">Diabetic Nephropathy</span>
+                                </div>
+                                <div class="feature-card"
+                                    style="padding:1.5rem; display:flex; align-items:center; gap:12px;">
+                                    <div style="width:10px; height:10px; background:var(--accent); border-radius:50%;">
+                                    </div>
+                                    <span style="font-weight:600;">Glomerulonephritis</span>
+                                </div>
+                                <div class="feature-card"
+                                    style="padding:1.5rem; display:flex; align-items:center; gap:12px;">
+                                    <div style="width:10px; height:10px; background:var(--accent); border-radius:50%;">
+                                    </div>
+                                    <span style="font-weight:600;">Proteinuria</span>
+                                </div>
+                                <div class="feature-card"
+                                    style="padding:1.5rem; display:flex; align-items:center; gap:12px;">
+                                    <div style="width:10px; height:10px; background:var(--accent); border-radius:50%;">
+                                    </div>
+                                    <span style="font-weight:600;">Electrolyte Imbalance</span>
+                                </div>
+                                <div class="feature-card"
+                                    style="padding:1.5rem; display:flex; align-items:center; gap:12px;">
+                                    <div style="width:10px; height:10px; background:var(--accent); border-radius:50%;">
+                                    </div>
+                                    <span style="font-weight:600;">Hematuria</span>
                                 </div>
                             </div>
-                        </form>
+                        </section>
 
-                        <div class="contact-note" style="margin-top:1rem;color:rgba(255,255,255,0.9)">
-                            <p>I welcome patients from across the region and am dedicated to delivering accessible, compassionate kidney care. Whether you have questions about your kidney health or wish to arrange a consultation, I am here to guide you with clarity, empathy, and expertise.</p>
-                        </div>
+                        <section id="education" class="section" aria-labelledby="education-heading">
+                            <div class="section-head">
+                                <h2 id="education-heading">Kidney Awareness</h2>
+                                <p>Empowering you with knowledge about prevention and early detection.</p>
+                            </div>
 
-                        <!-- Embedded Google Map (replace the src with your clinic's place/embed link) -->
-                        <div style="margin-top:1rem">
-                            <iframe title="Vijay Superspeciality Hospital location" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3899.64489744866!2d78.18271147505342!3d12.20454833123094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bac3df54d2813d9%3A0xef1b08a2db2b8f50!2sVijay%20Super%20Speciality%20Hospital%20%26%20Cancer%20Centre!5e0!3m2!1sen!2sin!4v1754651076303!5m2!1sen!2sin" width="100%" height="260" style="border:0;border-radius:12px;margin-top:12px" allowfullscreen="" loading="lazy"></iframe>
-                        </div>
+                            <div
+                                style="position:relative; max-width:900px; margin:0 auto; border-radius:var(--radius-md); overflow:hidden; box-shadow:var(--shadow-xl);">
+                                <div style="padding-bottom:56.25%; position:relative;">
+                                    <iframe src="https://app.presentations.ai/view/LCmdVl9OF4"
+                                        title="Kidney Disease Awareness Presentation" allow="autoplay; clipboard-write"
+                                        loading="lazy"
+                                        style="position:absolute; top:0; left:0; width:100%; height:100%; border:none;">
+                                    </iframe>
+                                </div>
+                            </div>
+
+                            <div style="text-align:center; margin-top:3rem;">
+                                <a href="education.html" class="btn-primary">Explore Education Library &rarr;</a>
+                            </div>
+                        </section>
+
+                        <section id="faq" class="section section-alt" aria-labelledby="faq-heading">
+                            <div class="section-head">
+                                <h2 id="faq-heading">Common Questions</h2>
+                            </div>
+                            <div style="max-width:800px; margin:0 auto; display:grid; gap:1rem;">
+                                <details
+                                    style="background:#fff; padding:1.5rem; border-radius:var(--radius-sm); box-shadow:var(--shadow-sm); cursor:pointer;">
+                                    <summary
+                                        style="font-weight:600; color:var(--primary); list-style:none; display:flex; justify-content:space-between; align-items:center;">
+                                        What should I bring to my first visit?
+                                        <span style="color:var(--accent);">+</span>
+                                    </summary>
+                                    <p style="margin-top:1rem; color:var(--text-muted); line-height:1.6;">Please bring
+                                        your current medication list, recent lab reports, imaging results (CT/USG), and
+                                        any discharge summaries. Recent blood pressure and blood sugar readings are also
+                                        very helpful.</p>
+                                </details>
+                                <details
+                                    style="background:#fff; padding:1.5rem; border-radius:var(--radius-sm); box-shadow:var(--shadow-sm); cursor:pointer;">
+                                    <summary
+                                        style="font-weight:600; color:var(--primary); list-style:none; display:flex; justify-content:space-between; align-items:center;">
+                                        When should I see a nephrologist?
+                                        <span style="color:var(--accent);">+</span>
+                                    </summary>
+                                    <p style="margin-top:1rem; color:var(--text-muted); line-height:1.6;">Consider a
+                                        consultation if you have persistent leg swelling, high blood pressure that is
+                                        hard to control, abnormal urine tests (protein/blood), or if your blood tests
+                                        show reduced kidney function (high creatinine).</p>
+                                </details>
+                                <details
+                                    style="background:#fff; padding:1.5rem; border-radius:var(--radius-sm); box-shadow:var(--shadow-sm); cursor:pointer;">
+                                    <summary
+                                        style="font-weight:600; color:var(--primary); list-style:none; display:flex; justify-content:space-between; align-items:center;">
+                                        Do you offer online consultations?
+                                        <span style="color:var(--accent);">+</span>
+                                    </summary>
+                                    <p style="margin-top:1rem; color:var(--text-muted); line-height:1.6;">Initial
+                                        consultations are best done in person for a thorough examination. Follow-ups can
+                                        sometimes be managed remotely depending on the condition.</p>
+                                </details>
+                            </div>
+                        </section>
+
+                        <section id="contact" class="section contact" aria-labelledby="contact-heading">
+                            <div class="section-head">
+                                <h2 id="contact-heading">Get in Touch</h2>
+                                <p>Advanced care, accessible to everyone.</p>
+                            </div>
+                            <div class="contact-card">
+                                <div style="display:grid; grid-template-columns: 1fr; gap:2rem;">
+
+                                    <div class="contact-info">
+                                        <h3 style="margin-bottom:1.5rem;">For Appointments & Inquiries</h3>
+                                        <div class="contact-actions" role="group" aria-label="Contact shortcuts">
+                                            <a class="btn-primary"
+                                                href="mailto:drvigneshsnephro@gmail.com?subject=Consultation%20Request">Email
+                                                Directly</a>
+                                            <a class="btn-secondary" href="https://goo.gl/maps/VijaySuperSpeciality"
+                                                target="_blank">Get Directions</a>
+                                        </div>
+                                        <div class="contact-note"
+                                            style="margin-top:2rem; padding:1.5rem; background:rgba(255,255,255,0.1); border-radius:var(--radius-md);">
+                                            <p style="color:rgba(255,255,255,0.9); margin:0;">"I welcome patients from
+                                                across the region. Whether you have questions about your kidney health
+                                                or wish to arrange a consultation, I am here to guide you with clarity
+                                                and empathy."</p>
+                                        </div>
+                                    </div>
+
+                                    <form id="contactForm" onsubmit="return handleContactSubmit(event)"
+                                        aria-label="Contact form" class="contact-form"
+                                        style="background:white; padding:2rem; border-radius:var(--radius-md); box-shadow:var(--shadow-lg);">
+                                        <h3 style="color:var(--text); margin-bottom:1.5rem; font-size:1.25rem;">Send a
+                                            Message</h3>
+                                        <input type="text" id="name" name="name" placeholder="Your Name" required
+                                            aria-label="Your name"
+                                            style="width:100%; padding:12px; margin-bottom:12px; border:1px solid #ddd; border-radius:var(--radius-sm);">
+                                        <input type="email" id="email" name="email" placeholder="Your Email" required
+                                            aria-label="Your email"
+                                            style="width:100%; padding:12px; margin-bottom:12px; border:1px solid #ddd; border-radius:var(--radius-sm);">
+                                        <input type="text" id="phone" name="phone" placeholder="Phone Number"
+                                            aria-label="Phone"
+                                            style="width:100%; padding:12px; margin-bottom:12px; border:1px solid #ddd; border-radius:var(--radius-sm);">
+                                        <textarea id="message" name="message" placeholder="How can we help?" required
+                                            aria-label="Message"
+                                            style="width:100%; padding:12px; margin-bottom:12px; border:1px solid #ddd; border-radius:var(--radius-sm); min-height:120px;"></textarea>
+                                        <button type="submit" class="btn-primary"
+                                            style="width:100%; justify-content:center;">Send Email</button>
+                                        <p class="form-note"
+                                            style="margin-top:1rem; font-size:0.85rem; color:var(--text-muted); text-align:center;">
+                                            This will open your email client with a draft.</p>
+                                    </form>
+                                </div>
+
+                                <!-- Embedded Google Map -->
+                                <div
+                                    style="margin-top:3rem; border-radius:var(--radius-md); overflow:hidden; box-shadow:var(--shadow-md);">
+                                    <iframe title="Vijay Superspeciality Hospital location"
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3899.64489744866!2d78.18271147505342!3d12.20454833123094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bac3df54d2813d9%3A0xef1b08a2db2b8f50!2sVijay%20Super%20Speciality%20Hospital%20%26%20Cancer%20Centre!5e0!3m2!1sen!2sin!4v1754651076303!5m2!1sen!2sin"
+                                        width="100%" height="300" style="border:0;" allowfullscreen=""
+                                        loading="lazy"></iframe>
+                                </div>
+
+                            </div>
+                        </section>
 
                     </div>
-                </section>
-
-            </div>
-        </div>
+                </div>
     </main>
 
     <footer role="contentinfo">
-        <div class="container">
-            <p>&copy; 2025 Nephrofoundation. All Rights Reserved</p>
-            <p>Compassionate Kidney Care | Comprehensive Patient Education | Advanced Nephrology Services</p>
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <span class="brand-name" style="font-size:1.5rem; color:white;">Dr. Vignesh Subramani</span>
+                <p style="margin-top:0.5rem; opacity:0.8;">NephroFoundation</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="education.html">Education</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-legal">
+                <p>&copy; 2025 Nephrofoundation. All Rights Reserved.</p>
+                <p>Compassionate Kidney Care | Comprehensive Patient Education</p>
+            </div>
         </div>
-    </footer>
+        <!-- Floating CTA for immediate contact -->
+        <a href="#contact" class="floating-cta" aria-label="Book consultation">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M21 8V7a2 2 0 0 0-2-2h-1" stroke="#fff" stroke-width="1.6" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                <path d="M3 6v14a2 2 0 0 0 2 2h12" stroke="#fff" stroke-width="1.6" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                <path d="M17 3v4" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            Book
+        </a>
 
-    <!-- Floating CTA for immediate contact -->
-    <a href="#contact" class="floating-cta" aria-label="Book consultation">
-        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 8V7a2 2 0 0 0-2-2h-1" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 6v14a2 2 0 0 0 2 2h12" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M17 3v4" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        Book
-    </a>
-
-    <!-- Minimal, deferred JS: non-blocking, accessible, and small. -->
-    <script defer>
-    (function(){
-        const EMAIL = 'drvigneshsnephro@gmail.com';
-
-        // Mobile menu
-        const toggle = document.querySelector('.mobile-menu-toggle');
-        const navLinks = document.querySelector('.nav-links');
-        if(toggle && navLinks){
-            toggle.addEventListener('click', function(){
-                const isActive = navLinks.classList.toggle('active');
-                this.setAttribute('aria-expanded', isActive);
-            });
-            // close on link click
-            navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click', ()=>{
-                navLinks.classList.remove('active');
-                toggle.setAttribute('aria-expanded','false');
-            }));
-        }
-
-        // Set aria-current for links that match current hash or path
-        function setAriaCurrent(){
-            const links = document.querySelectorAll('.nav-links a');
-            links.forEach(link => {
-                try{
-                    const href = link.getAttribute('href');
-                    if(href && (href === window.location.hash || (href !== '#' && window.location.pathname.endsWith(href)))){
-                        link.setAttribute('aria-current','page');
-                    } else {
-                        link.removeAttribute('aria-current');
-                    }
-                }catch(e){}
-            });
-        }
-        setAriaCurrent();
-        window.addEventListener('hashchange', setAriaCurrent);
-
-        // Scrollspy: keep nav state updated as the user scrolls.
-        const sectionIds = ['about','services','conditions','education','faq','contact'];
-        const sections = sectionIds.map(id => document.getElementById(id)).filter(Boolean);
-        const byId = new Map(sectionIds.map(id => [id, document.querySelector('.nav-links a[href="#'+id+'"]')]));
-        if('IntersectionObserver' in window && sections.length){
-            const spy = new IntersectionObserver((entries)=>{
-                // pick the most visible intersecting section
-                const visible = entries
-                    .filter(e=>e.isIntersecting)
-                    .sort((a,b)=>b.intersectionRatio - a.intersectionRatio)[0];
-                if(!visible || !visible.target || !visible.target.id) return;
-                byId.forEach((link, id) => {
-                    if(!link) return;
-                    if(id === visible.target.id) link.setAttribute('aria-current','page');
-                    else link.removeAttribute('aria-current');
-                });
-            },{threshold:[0.12,0.25,0.5,0.75],rootMargin:'-20% 0px -65% 0px'});
-            sections.forEach(s=>spy.observe(s));
-        }
-
-        // Toast utility
-        let toastEl = document.querySelector('.toast');
-        if(!toastEl){
-            toastEl = document.createElement('div');
-            toastEl.className = 'toast';
-            toastEl.setAttribute('role','status');
-            toastEl.setAttribute('aria-live','polite');
-            document.body.appendChild(toastEl);
-        }
-        let toastTimer = null;
-        function showToast(text){
-            toastEl.textContent = text;
-            toastEl.classList.add('show');
-            clearTimeout(toastTimer);
-            toastTimer = setTimeout(()=>toastEl.classList.remove('show'), 2400);
-        }
-
-        // Copy email shortcut
-        const copyEmailBtn = document.getElementById('copyEmailBtn');
-        if(copyEmailBtn){
-            copyEmailBtn.addEventListener('click', async ()=>{
-                try{
-                    await navigator.clipboard.writeText(EMAIL);
-                    showToast('Email copied to clipboard');
-                }catch(e){
-                    // Fallback for older browsers
-                    const ta = document.createElement('textarea');
-                    ta.value = EMAIL;
-                    ta.setAttribute('readonly','');
-                    ta.style.position = 'absolute';
-                    ta.style.left = '-9999px';
-                    document.body.appendChild(ta);
-                    ta.select();
-                    try{ document.execCommand('copy'); showToast('Email copied'); }
-                    catch(err){ showToast('Copy not supported'); }
-                    document.body.removeChild(ta);
-                }
-            });
-        }
-
-        // Simple contact form handler: open default mail client with prefilled values
-        window.handleContactSubmit = function(e){
-            e.preventDefault();
-            const name = encodeURIComponent(document.getElementById('name').value.trim());
-            const subject = encodeURIComponent(document.getElementById('subject').value.trim());
-            const email = encodeURIComponent(document.getElementById('email').value.trim());
-            const phone = encodeURIComponent(document.getElementById('phone').value.trim());
-            const message = encodeURIComponent(document.getElementById('message').value.trim());
-
-            const bodyLines = [
-                'Name: '+name,
-                'Email: '+email,
-                phone ? ('Phone: '+phone) : '',
-                '',
-                'Message:',
-                message
-            ].filter(Boolean).join('%0D%0A');
-
-            const mailto = 'mailto:'+EMAIL
-                         + '?subject=' + subject
-                         + '&body=' + bodyLines;
-
-            // open mail client
-            window.location.href = mailto;
-            return false;
-        };
-
-        // Simple image error handling
-        document.querySelectorAll('img').forEach(img=>{
-            img.addEventListener('error', function(){
-                this.style.display = 'none';
-                this.setAttribute('alt','Image not available');
-            });
-        });
-
-        // Add subtle reduce-motion friendly intersection observer for cards
-        if('IntersectionObserver' in window){
-            const obs = new IntersectionObserver((entries)=>{
-                entries.forEach(ent=>{
-                    if(ent.isIntersecting){
-                        ent.target.style.opacity='1';
-                        ent.target.style.transform='translateY(0)';
-                        obs.unobserve(ent.target);
-                    }
-                });
-            },{threshold:0.12,rootMargin:'0px 0px -30px 0px'});
-            document.querySelectorAll('.qual-card,.service-card,.condition-item').forEach((el)=>{
-                el.style.opacity='0';
-                el.style.transform='translateY(10px)';
-                el.style.transition='opacity .6s ease, transform .6s ease';
-                obs.observe(el);
-            });
-        }
-
-    })();
-    </script>
+        <!-- Main Script (Deferred) -->
+        <script src="js/main.js" defer></script>
 </body>
+
 </html>
