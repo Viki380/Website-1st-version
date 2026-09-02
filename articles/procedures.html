@@ -7,6 +7,8 @@
     <title>Kidney Procedures & Treatments | Dr. Vignesh</title>
     <meta name="description"
         content="Patient guide to renal biopsy, dialysis access (permcath), hemodialysis, and kidney transplant. What to expect and how to prepare.">
+    <link rel="canonical" href="https://nephrofoundation.com/articles/procedures.html">
+    <link rel="icon" href="../nephro-logo.ico" type="image/x-icon">
     <!-- Premium Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,24 +21,22 @@
 </head>
 
 <body>
-    <header>
-        <nav class="container" role="navigation" aria-label="Main navigation">
-            <a href="../Index.html" class="brand">
-                <span class="brand-name">Dr. Vignesh</span>
-                <span class="brand-sub">NephroFoundation</span>
+    <header id="header">
+        <nav class="container" aria-label="Main navigation">
+            <a href="../Index.html" class="logo">
+                Dr. Vignesh Subramani
+                <span>Nephrology &amp; Transplantation</span>
             </a>
             <button class="mobile-toggle" aria-label="Toggle menu" aria-expanded="false">
-                <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="2" fill="none">
-                    <path d="M3 12h18M3 6h18M3 18h18" />
-                </svg>
+                <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="2" fill="none"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
             </button>
-            <ul class="nav-links" role="menubar">
-                <li role="none"><a href="../Index.html#about" role="menuitem">About</a></li>
-                <li role="none"><a href="../Index.html#services" role="menuitem">Services</a></li>
-                <li role="none"><a href="../education.html" role="menuitem">Education</a></li>
-                <li role="none"><a href="../Index.html#contact" role="menuitem">Contact</a></li>
-                <li role="none"><a href="../Index.html#contact" class="btn-primary" style="padding: 10px 24px;">Book
-                        Consultation</a></li>
+            <ul class="nav-links">
+                <li><a href="../Index.html#about">About</a></li>
+                <li><a href="../Index.html#expertise">Expertise</a></li>
+                <li><a href="../Index.html#services">Services</a></li>
+                <li><a href="../education.html" class="active">Education</a></li>
+                <li><a href="../Index.html#contact">Contact</a></li>
+                <li><a href="../Index.html#contact" class="btn-nav">Book Appointment</a></li>
             </ul>
         </nav>
     </header>
@@ -44,10 +44,8 @@
     <main>
         <section class="article-hero">
             <div class="container">
-                <span
-                    style="color:var(--accent); font-weight:600; text-transform:uppercase; letter-spacing:1px; font-size:0.9rem;">Patient
-                    Guide</span>
-                <h1 style="font-size:3rem; margin-top:0.5rem; margin-bottom:1rem;">Procedures Explained</h1>
+                <span class="eyebrow">Patient Guide</span>
+                <h1>Procedures Explained</h1>
                 <p style="color:var(--text-muted); max-width:600px; margin:0 auto;">Clear explanations of common kidney
                     treatments so you know exactly what to expect.</p>
             </div>
@@ -55,6 +53,9 @@
 
         <article class="container">
             <div class="content-wrapper">
+                <nav class="breadcrumbs" aria-label="Breadcrumb">
+                    <a href="../Index.html">Home</a><span>/</span><a href="../education.html">Education</a><span>/</span>Procedures
+                </nav>
 
                 <!-- 1. Renal Biopsy -->
                 <div class="procedure-block" id="biopsy">
@@ -132,7 +133,7 @@
                     <p>When kidneys fail, dialysis does the work of cleaning your blood. There are two main types
                         managed by our team.</p>
 
-                    <div style="background:#f1f5f9; padding:1.5rem; border-radius:var(--radius-md); margin-top:1.5rem;">
+                    <div class="callout" style="margin-top:1.5rem;">
                         <h3 style="font-size:1.2rem; margin-bottom:1rem;">Hemodialysis vs. Peritoneal Dialysis</h3>
                         <ul style="padding-left:1.5rem; color:var(--text-main);">
                             <li style="margin-bottom:0.5rem;"><strong>Hemodialysis:</strong> Blood is pumped out of your
@@ -174,35 +175,66 @@
                     </div>
                 </div>
 
-                <div style="margin-top:3rem; padding-top:2rem; border-top:1px solid #e2e8f0; text-align:center;">
+                <div style="margin-top:3rem; padding-top:2rem; border-top:1px solid var(--glass-border); text-align:center;">
                     <h3>Have more questions?</h3>
                     <p style="color:var(--text-muted); margin-bottom:1.5rem;">Every patient's situation is unique. Book
                         a consultation for a personal assessment.</p>
-                    <a href="../Index.html#contact" class="btn-primary">Book Consultation</a>
+                    <a href="../Index.html#contact" class="btn btn-primary">Book Consultation</a>
                 </div>
+
+                <div class="references">
+                    <h3>References &amp; Further Reading</h3>
+                    <ol>
+                        <li>National Kidney Foundation. "Kidney Biopsy," "Hemodialysis," "Peritoneal Dialysis." <a href="https://www.kidney.org/atoz/atozTopic_Dialysis" target="_blank" rel="noopener noreferrer">kidney.org</a></li>
+                        <li>NIDDK, National Institutes of Health. "Kidney Failure Treatment Options." <a href="https://www.niddk.nih.gov/health-information/kidney-disease/kidney-failure" target="_blank" rel="noopener noreferrer">niddk.nih.gov</a></li>
+                        <li>National Kidney Foundation. "Kidney Transplant." <a href="https://www.kidney.org/atoz/content/kidney-transplant" target="_blank" rel="noopener noreferrer">kidney.org</a></li>
+                    </ol>
+                </div>
+
+                <p class="medical-disclaimer">This article is for general education only and does not replace personalised
+                    medical advice. Your treatment plan should be guided by your nephrology team.</p>
 
             </div>
         </article>
     </main>
 
-    <footer role="contentinfo">
-        <div class="container footer-grid">
-            <div class="footer-brand">
-                <span class="brand-name" style="font-size:1.5rem; color:white;">Dr. Vignesh</span>
-                <p style="margin-top:0.5rem; opacity:0.8;">NephroFoundation</p>
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <span class="brand-name">Dr. Vignesh Subramani</span>
+                    <p>Consultant Nephrologist &amp; Transplant Physician. Compassionate, evidence-based kidney care in Dharmapuri, Tamil Nadu.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="../Index.html#about">About</a></li>
+                        <li><a href="../Index.html#expertise">Expertise</a></li>
+                        <li><a href="../Index.html#services">Services</a></li>
+                        <li><a href="../Index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Education</h4>
+                    <ul>
+                        <li><a href="../education.html">Patient Hub</a></li>
+                        <li><a href="dialysis-life.html">Living on Dialysis</a></li>
+                        <li><a href="transplant-guide.html">Transplant Guide</a></li>
+                        <li><a href="ckd-guide.html">Understanding CKD</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="mailto:drvigneshsnephro@gmail.com">drvigneshsnephro@gmail.com</a></li>
+                        <li>Vijay Superspeciality Hospital</li>
+                        <li>Dharmapuri, Tamil Nadu, India</li>
+                    </ul>
+                </div>
             </div>
-            <div class="footer-links">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="../Index.html#about">About</a></li>
-                    <li><a href="../Index.html#services">Services</a></li>
-                    <li><a href="../education.html">Education</a></li>
-                    <li><a href="../Index.html#contact">Contact</a></li>
-                </ul>
-            </div>
-            <div class="footer-legal">
-                <p>&copy; 2025 Nephrofoundation. All Rights Reserved.</p>
-                <p>Compassionate Kidney Care | Comprehensive Patient Education</p>
+            <div class="footer-bottom">
+                <p>&copy; <span data-year>2026</span> Dr. Vignesh Subramani. All rights reserved.</p>
+                <p style="color: var(--secondary); font-size: 0.8rem; max-width: 420px;">For educational purposes only &mdash; not a substitute for professional medical advice, diagnosis, or treatment.</p>
             </div>
         </div>
     </footer>

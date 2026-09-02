@@ -9,7 +9,16 @@
         content="Dr. Vignesh Subramani - Consultant Nephrologist. Specialized in renal transplant care, dialysis, and advanced CKD management.">
     <meta name="keywords"
         content="nephrologist tamil nadu, kidney doctor, renal transplant, dialysis, Dr. Vignesh Subramani">
-    
+    <link rel="canonical" href="https://nephrofoundation.com/">
+    <link rel="icon" href="nephro-logo.ico" type="image/x-icon">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Dr. Vignesh Subramani | Excellence in Nephrology">
+    <meta property="og:description" content="Consultant Nephrologist specialising in renal transplant care, dialysis, and advanced CKD management.">
+    <meta property="og:url" content="https://nephrofoundation.com/">
+    <meta property="og:image" content="https://nephrofoundation.com/images/doctor-image.png">
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,15 +35,74 @@
       "name": "Dr. Vignesh Subramani",
       "medicalSpecialty": "Nephrology",
       "url": "https://nephrofoundation.com",
+      "telephone": "+91-9500848820",
+      "email": "drvigneshsnephro@gmail.com",
+      "image": "https://nephrofoundation.com/images/doctor-image.png",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "TNMC Registration",
+        "value": "124803"
+      },
+      "worksFor": {
+        "@type": "Hospital",
+        "name": "Vijay Super Speciality Hospital & Cancer Centre",
+        "url": "https://vijaysuperspecialityhospital.in",
+        "telephone": "+91-4348-219820"
+      },
       "address": {
         "@type": "PostalAddress",
+        "streetAddress": "Konanginaickanahalli, Baisuhalli",
         "addressLocality": "Dharmapuri",
         "addressRegion": "Tamil Nadu",
+        "postalCode": "635205",
         "addressCountry": "IN"
       },
       "alumniOf": [
         "Madras Medical College",
         "PGIMER Chandigarh"
+      ],
+      "sameAs": [
+        "https://share.google/kaxfBSApxWMwPjbqg"
+      ]
+    }
+    </script>
+
+    <!-- FAQ structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What does a nephrologist do?",
+          "acceptedAnswer": { "@type": "Answer", "text": "A nephrologist is a doctor who specialises in kidney health. They diagnose and treat conditions such as chronic kidney disease, high blood pressure, electrolyte disorders, and kidney failure, and manage dialysis and kidney transplantation." }
+        },
+        {
+          "@type": "Question",
+          "name": "When should I see a nephrologist?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Consider a nephrology review if you have diabetes or high blood pressure, protein or blood in your urine, a low or falling eGFR, recurrent kidney stones, unexplained swelling, or a family history of kidney disease." }
+        },
+        {
+          "@type": "Question",
+          "name": "Where does Dr. Vignesh Subramani consult?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Dr. Vignesh Subramani consults at Vijay Super Speciality Hospital & Cancer Centre, Konanginaickanahalli, Baisuhalli, Dharmapuri - 635205, Tamil Nadu. Appointments: 04348 219820 or +91 95008 48820." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can chronic kidney disease be reversed?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Most chronic kidney disease cannot be cured, but early diagnosis and treatment can slow or halt its progression and prevent complications. Controlling blood pressure, blood sugar and diet is key." }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the early warning signs of kidney disease?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Early kidney disease often has no symptoms. As it advances you may notice swelling in the feet or ankles, foamy urine, frequent night-time urination, fatigue, or poor appetite. Simple blood and urine tests can detect it early." }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need a referral to book an appointment?",
+          "acceptedAnswer": { "@type": "Answer", "text": "A referral is not required. You can request an appointment directly by phone, WhatsApp, or the contact form on this website." }
+        }
       ]
     }
     </script>
@@ -43,17 +111,21 @@
 <body>
 
     <header id="header">
-        <nav class="container">
+        <nav class="container" aria-label="Main navigation">
             <a href="Index.html" class="logo">
                 Dr. Vignesh Subramani
                 <span>Nephrology & Transplantation</span>
             </a>
+            <button class="mobile-toggle" aria-label="Toggle menu" aria-expanded="false">
+                <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="2" fill="none"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+            </button>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#expertise">Expertise</a></li>
                 <li><a href="#services">Services</a></li>
+                <li><a href="education.html">Education</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="#contact" class="btn-outline" style="padding: 0.8rem 1.5rem;">Book Appointment</a></li>
+                <li><a href="#contact" class="btn-nav">Book Appointment</a></li>
             </ul>
         </nav>
     </header>
@@ -72,7 +144,7 @@
                     </div>
                 </div>
                 <div class="hero-image reveal" style="transition-delay: 0.2s;">
-                    <img src="images/hero-portrait.png" alt="Dr. Vignesh Subramani">
+                    <img src="images/doctor-image.webp" alt="Dr. Vignesh Subramani, Consultant Nephrologist">
                 </div>
             </div>
         </section>
@@ -87,7 +159,7 @@
                 <div class="bento-grid">
                     <div class="bento-item bento-1 reveal">
                         <h3>DM Nephrology</h3>
-                        <p>Trained at the prestigious **PGIMER Chandigarh**, specializing in complex renal disorders and cutting-edge transplant protocols.</p>
+                        <p>Trained at the prestigious <strong>PGIMER Chandigarh</strong>, specializing in complex renal disorders and cutting-edge transplant protocols.</p>
                     </div>
                     <div class="bento-item bento-2 reveal">
                         <h3>ESE Nephrology (UK)</h3>
@@ -109,12 +181,12 @@
         <section id="about" class="section" style="background: var(--bg-surface);">
             <div class="container about-split">
                 <div class="reveal">
-                    <img src="images/doctor-image.webp" alt="Dr. Vignesh" style="width: 100%; border-radius: var(--radius-lg); opacity: 0.8;">
+                    <img src="images/doctor-image.webp" alt="Dr. Vignesh Subramani" style="width: 100%; border-radius: var(--radius-lg);">   
                 </div>
                 <div class="about-content reveal">
                     <span>The Practitioner</span>
                     <h2>A Legacy of Medical Integrity</h2>
-                    <p>Dr. Vignesh Subramani is a Consultant Nephrologist dedicated to providing uncompromising care. His journey began at **Madras Medical College**, where he completed his MBBS and MD, followed by a DM in Nephrology from **PGIMER Chandigarh**.</p>
+                    <p>Dr. Vignesh Subramani is a Consultant Nephrologist dedicated to providing uncompromising care. His journey began at <strong>Madras Medical College</strong>, where he completed his MBBS and MD, followed by a DM in Nephrology from <strong>PGIMER Chandigarh</strong>.</p>
                     <p>His approach combines deep clinical expertise with a subtle, patient-first philosophy. He believes that every renal journey is unique, requiring a bespoke management plan that balances technical precision with human understanding.</p>
                     
                     <div class="stat-grid">
@@ -174,6 +246,42 @@
             </div>
         </section>
 
+        <!-- FAQ Section -->
+        <section id="faq" class="section" style="background: var(--bg-surface);">
+            <div class="container">
+                <div class="section-title reveal">
+                    <span>Answers</span>
+                    <h2>Frequently Asked Questions</h2>
+                </div>
+                <div class="faq-list reveal">
+                    <details class="faq-item">
+                        <summary>What does a nephrologist do?</summary>
+                        <div class="faq-answer">A nephrologist is a doctor who specialises in kidney health. We diagnose and treat conditions such as chronic kidney disease, high blood pressure, electrolyte disorders and kidney failure, and manage dialysis and kidney transplantation.</div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>When should I see a nephrologist?</summary>
+                        <div class="faq-answer">Consider a review if you have diabetes or high blood pressure, protein or blood in your urine, a low or falling eGFR, recurrent kidney stones, unexplained swelling, or a family history of kidney disease.</div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Where does Dr. Vignesh Subramani consult?</summary>
+                        <div class="faq-answer">At Vijay Super Speciality Hospital &amp; Cancer Centre, Konanginaickanahalli, Baisuhalli, Dharmapuri &ndash; 635205. Appointments: <a href="tel:+914348219820">04348 219820</a> or <a href="tel:+919500848820">+91 95008 48820</a>.</div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Can chronic kidney disease be reversed?</summary>
+                        <div class="faq-answer">Most CKD cannot be cured, but early diagnosis and treatment can slow or halt its progression and prevent complications. Controlling blood pressure, blood sugar and diet is key. See our <a href="articles/ckd-guide.html">CKD guide</a>.</div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>What are the early warning signs of kidney disease?</summary>
+                        <div class="faq-answer">Early kidney disease often has no symptoms. As it advances you may notice swelling in the feet or ankles, foamy urine, frequent night-time urination, fatigue, or poor appetite. Simple blood and urine tests can detect it early &mdash; see <a href="articles/kidney-tests.html">understanding your kidney tests</a>.</div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Do I need a referral to book an appointment?</summary>
+                        <div class="faq-answer">No referral is required. You can request an appointment directly by phone, WhatsApp, or the contact form below.</div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
         <!-- Contact Section -->
         <section id="contact" class="section">
             <div class="container">
@@ -181,35 +289,68 @@
                     <div class="contact-info">
                         <span>Contact</span>
                         <h2>Begin Your Recovery</h2>
-                        <p>Available for consultations at Vijay Superspeciality Hospital, Dharmapuri. For urgent inquiries or second opinions, please reach out directly.</p>
-                        <div style="margin-top: 3rem;">
-                            <p style="color: var(--primary); font-size: 0.9rem;">EMAIL</p>
-                            <p>drvigneshsnephro@gmail.com</p>
-                            <p style="color: var(--primary); font-size: 0.9rem; margin-top: 2rem;">LOCATION</p>
-                            <p>Dharmapuri, Tamil Nadu, India</p>
+                        <p>Dr. Vignesh Subramani consults at Vijay Super Speciality Hospital &amp; Cancer Centre, Dharmapuri. For appointments, urgent inquiries or second opinions, reach out below.</p>
+                        <div class="contact-details">
+                            <div>
+                                <p class="label">Appointments</p>
+                                <p class="value"><a href="tel:+914348219820">04348 219820</a> &nbsp;&middot;&nbsp; <a href="tel:+919500848820">+91 95008 48820</a></p>
+                            </div>
+                            <div>
+                                <p class="label">Email</p>
+                                <p class="value"><a href="mailto:drvigneshsnephro@gmail.com">drvigneshsnephro@gmail.com</a></p>
+                            </div>
+                            <div>
+                                <p class="label">Hospital</p>
+                                <p class="value">Vijay Super Speciality Hospital &amp; Cancer Centre,<br>Konanginaickanahalli, Baisuhalli, Dharmapuri &ndash; 635205</p>
+                            </div>
+                            <div>
+                                <p class="label">24&times;7 Emergency &amp; Ambulance</p>
+                                <p class="value"><a href="tel:+914348219820">04348 219820</a></p>
+                            </div>
+                            <div>
+                                <p class="label">Medical Registration</p>
+                                <p class="value">Reg. No. 124803 &mdash; Tamil Nadu Medical Council
+                                    <a href="https://www.tamilnadumedicalcouncil.org/verify/124803" target="_blank" rel="noopener noreferrer" style="color:var(--accent);font-size:0.85rem;">Verify &nearr;</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-actions">
+                            <a href="https://wa.me/919500848820" target="_blank" rel="noopener noreferrer" class="btn btn-primary">WhatsApp Us</a>
+                            <a href="tel:+919500848820" class="btn btn-outline">Call Now</a>
+                            <a href="https://share.google/kaxfBSApxWMwPjbqg" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Reviews on Google</a>
                         </div>
                     </div>
-                    <form class="contact-form" onsubmit="return handleContactSubmit(event)">
+                    <form id="contact-form" class="contact-form">
+                        <input type="hidden" name="subject" value="New consultation inquiry — Nephrofoundation">
+                        <input type="hidden" name="from_name" value="Nephrofoundation Website">
+                        <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
                         <div class="form-group">
-                            <label>Full Name</label>
-                            <input type="text" id="name" required placeholder="John Doe">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required placeholder="John Doe">
                         </div>
                         <div class="form-group">
-                            <label>Email Address</label>
-                            <input type="email" id="email" required placeholder="john@example.com">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required placeholder="john@example.com">
                         </div>
                         <div class="form-group full">
-                            <label>Inquiry Subject</label>
-                            <input type="text" id="subject" required placeholder="e.g., Transplant Consultation">
+                            <label for="inquiry">Inquiry Subject</label>
+                            <input type="text" id="inquiry" name="inquiry" required placeholder="e.g., Transplant Consultation">
                         </div>
                         <div class="form-group full">
-                            <label>Message</label>
-                            <textarea id="message" rows="5" required placeholder="How can I assist you?"></textarea>
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required placeholder="How can I assist you?"></textarea>
                         </div>
                         <div class="form-group full">
                             <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">Send Message</button>
                         </div>
+                        <div class="form-group full">
+                            <p id="form-status" role="status" aria-live="polite" style="font-size:0.9rem;margin:0;"></p>
+                        </div>
                     </form>
+                </div>
+                <div class="map-embed reveal">
+                    <iframe title="Vijay Super Speciality Hospital & Cancer Centre location"
+                        src="https://www.google.com/maps?q=Vijay%20Super%20Speciality%20Hospital%20%26%20Cancer%20Centre%2C%20Baisuhalli%2C%20Dharmapuri%20635205&output=embed"
+                        loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
                 </div>
             </div>
         </section>
@@ -217,12 +358,43 @@
 
     <footer>
         <div class="container">
-            <div class="footer-bottom">
-                <p>&copy; 2026 Dr. Vignesh Subramani. All rights reserved.</p>
-                <div style="display: flex; gap: 2rem;">
-                    <a href="#" style="color: var(--secondary); text-decoration: none;">Privacy Policy</a>
-                    <a href="#" style="color: var(--secondary); text-decoration: none;">Terms of Service</a>
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <span class="brand-name">Dr. Vignesh Subramani</span>
+                    <p>Consultant Nephrologist & Transplant Physician. Compassionate, evidence-based kidney care in Dharmapuri, Tamil Nadu.</p>
+                    <p style="font-size:0.8rem;">Reg. No. 124803 &mdash; Tamil Nadu Medical Council</p>
                 </div>
+                <div class="footer-col">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#expertise">Expertise</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Education</h4>
+                    <ul>
+                        <li><a href="education.html">Patient Hub</a></li>
+                        <li><a href="articles/ckd-guide.html">Understanding CKD</a></li>
+                        <li><a href="articles/diet-nutrition.html">Renal Diet</a></li>
+                        <li><a href="articles/procedures.html">Procedures</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="tel:+914348219820">04348 219820</a></li>
+                        <li><a href="tel:+919500848820">+91 95008 48820</a></li>
+                        <li><a href="mailto:drvigneshsnephro@gmail.com">drvigneshsnephro@gmail.com</a></li>
+                        <li>Baisuhalli, Dharmapuri &ndash; 635205</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span data-year>2026</span> Dr. Vignesh Subramani. All rights reserved.</p>
+                <p style="color: var(--secondary); font-size: 0.8rem; max-width: 420px;">For educational purposes only — not a substitute for professional medical advice, diagnosis, or treatment.</p>
             </div>
         </div>
     </footer>

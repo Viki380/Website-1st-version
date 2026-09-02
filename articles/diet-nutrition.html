@@ -7,27 +7,43 @@
     <title>The Renal Diet Basics | Dr. Vignesh Subramani</title>
     <meta name="description"
         content="Simple guide to the kidney-friendly diet. Learn about sodium, potassium, and phosphorus management for kidney health.">
+    <link rel="canonical" href="https://nephrofoundation.com/articles/diet-nutrition.html">
+    <link rel="icon" href="../nephro-logo.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
 
 </head>
 
 <body>
-    <header>
-        <nav class="container" role="navigation">
-            <div class="logo"><a href="../Index.html" style="text-decoration:none;color:inherit;">Nephrofoundation</a>
-            </div>
-            <a href="../education.html" style="text-decoration:none;font-weight:600;color:var(--primary);">&larr; Back
-                to Education</a>
+    <header id="header">
+        <nav class="container" aria-label="Main navigation">
+            <a href="../Index.html" class="logo">
+                Dr. Vignesh Subramani
+                <span>Nephrology &amp; Transplantation</span>
+            </a>
+            <button class="mobile-toggle" aria-label="Toggle menu" aria-expanded="false">
+                <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="2" fill="none"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+            </button>
+            <ul class="nav-links">
+                <li><a href="../Index.html#about">About</a></li>
+                <li><a href="../Index.html#expertise">Expertise</a></li>
+                <li><a href="../Index.html#services">Services</a></li>
+                <li><a href="../education.html" class="active">Education</a></li>
+                <li><a href="../Index.html#contact">Contact</a></li>
+                <li><a href="../Index.html#contact" class="btn-nav">Book Appointment</a></li>
+            </ul>
         </nav>
     </header>
 
     <main>
         <section class="article-hero">
             <div class="container">
-                <span
-                    style="color:var(--accent); font-weight:600; text-transform:uppercase; letter-spacing:1px; font-size:0.9rem;">Diet
-                    & Lifestyle</span>
-                <h1 style="font-size:3rem; margin-top:0.5rem; margin-bottom:1rem;">The Renal Diet: Simplified</h1>
+                <span class="eyebrow">Diet &amp; Lifestyle</span>
+                <h1>The Renal Diet: Simplified</h1>
                 <p style="color:var(--text-muted); max-width:600px; margin:0 auto;">What you eat has a direct impact on
                     your kidneys. A kidney-friendly diet generally limits certain nutrients to prevent waste buildup.
                 </p>
@@ -36,7 +52,10 @@
 
         <div class="container">
             <article class="content-wrapper">
-                <p class="lead" style="font-size:1.2rem;font-weight:500;color:var(--text);">There is no single "kidney
+                <nav class="breadcrumbs" aria-label="Breadcrumb">
+                    <a href="../Index.html">Home</a><span>/</span><a href="../education.html">Education</a><span>/</span>The Renal Diet
+                </nav>
+                <p class="lead">There is no single "kidney
                     diet" that works for everyone. Your specific needs will change depending on your stage of kidney
                     disease. However, most plans focus on monitoring a few key nutrients.</p>
 
@@ -91,17 +110,66 @@
                 <p>Aim for low sodium and check ingredient lists for hidden phosphorus.</p>
 
                 <div style="margin-top:3rem;text-align:center;">
-                    <a href="../Index.html#contact" class="cta-button">Get a Personalized Diet Plan</a>
+                    <a href="../Index.html#contact" class="btn btn-primary">Get a Personalized Diet Plan</a>
                 </div>
+
+                <div class="references">
+                    <h3>References &amp; Further Reading</h3>
+                    <ol>
+                        <li>National Kidney Foundation. "Nutrition and Kidney Disease, Stages 1-5." <a href="https://www.kidney.org/atoz/content/nutrikidfail_stage1-4" target="_blank" rel="noopener noreferrer">kidney.org</a></li>
+                        <li>NIDDK, National Institutes of Health. "Eating Right for Chronic Kidney Disease." <a href="https://www.niddk.nih.gov/health-information/kidney-disease/chronic-kidney-disease-ckd/eating-nutrition" target="_blank" rel="noopener noreferrer">niddk.nih.gov</a></li>
+                        <li>National Kidney Foundation. "Potassium" &amp; "Phosphorus and Your Diet." <a href="https://www.kidney.org/atoz/content/potassium" target="_blank" rel="noopener noreferrer">kidney.org</a></li>
+                    </ol>
+                </div>
+
+                <p class="medical-disclaimer">This article is for general education only and does not replace personalised
+                    dietary or medical advice. Please consult your doctor or renal dietitian before making major diet changes.</p>
             </article>
         </div>
     </main>
 
-    <footer style="margin-top:4rem;">
-        <div class="container" style="text-align:center;padding:2rem;color:var(--muted);font-size:0.9rem;">
-            &copy; 2025 Nephrofoundation.
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <span class="brand-name">Dr. Vignesh Subramani</span>
+                    <p>Consultant Nephrologist &amp; Transplant Physician. Compassionate, evidence-based kidney care in Dharmapuri, Tamil Nadu.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="../Index.html#about">About</a></li>
+                        <li><a href="../Index.html#expertise">Expertise</a></li>
+                        <li><a href="../Index.html#services">Services</a></li>
+                        <li><a href="../Index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Education</h4>
+                    <ul>
+                        <li><a href="../education.html">Patient Hub</a></li>
+                        <li><a href="ckd-guide.html">Understanding CKD</a></li>
+                        <li><a href="kidney-stones.html">Kidney Stones</a></li>
+                        <li><a href="prevention.html">Prevention</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="mailto:drvigneshsnephro@gmail.com">drvigneshsnephro@gmail.com</a></li>
+                        <li>Vijay Superspeciality Hospital</li>
+                        <li>Dharmapuri, Tamil Nadu, India</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span data-year>2026</span> Dr. Vignesh Subramani. All rights reserved.</p>
+                <p style="color: var(--secondary); font-size: 0.8rem; max-width: 420px;">For educational purposes only &mdash; not a substitute for professional medical advice, diagnosis, or treatment.</p>
+            </div>
         </div>
     </footer>
+
+    <script src="../js/main.js" defer></script>
 </body>
 
 </html>
